@@ -1,0 +1,106 @@
+{% load staticfiles %}
+{% load bootstrap4 %}
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blockchain Validator</title>
+  <link rel="shortcut icon" type="image/png" href="{% static "/images/ico.png" %}" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static '/css/main.css' %}">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+  <script src="{% static "/js/crypto-js.js" %}"></script>
+  <script src="{% static "/js/moment.js" %}"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="{% static "images/ok-mark.svg" %}" width="30" height="30" class="d-inline-block align-top" alt="">
+    <span class="ml-2">Blockchain Validator</span>
+  </a>
+  <a href="/logout">Cerrar sesión</a>
+</nav>
+{% bootstrap_messages %}
+<div class="container">
+  <div class="row profile">
+  	<div class="col-md-3">
+  		<div class="profile-sidebar">
+  			<div class="profile-userpic">
+  				<img src="https://aumentada.net/wp-content/uploads/2015/05/user.png" class="img-responsive" alt="">
+  			</div>
+  			<div class="profile-usertitle">
+  				<div class="profile-usertitle-name">
+  					{{request.user.first_name}}
+  				</div>
+  				<div class="profile-usertitle-name">
+  				{{request.user.last_name}}
+  				</div>
+  			</div>
+  			<div class="profile-userbuttons">
+          <strong id="balance_eth">{{ balance }}</strong> ETH
+  				<a role="button" href="https://www.rinkeby.io/#faucet" class="btn depositar btn-sm ml-2" target="_blank">Depositar</a>
+
+  			</div>
+  			<!-- END SIDEBAR BUTTONS -->
+  			<!-- SIDEBAR MENU -->
+  			<div class="profile-usermenu">
+  				<ul class="nav">
+  					<li class="{% if '/home' in request.path  %}active{% endif %}">
+  						<a href="{% url 'home' %}">
+  						<i class="glyphicon glyphicon-home"></i>
+  						Documentos</a>
+  					</li>
+  					<li class="{% if '/upload' == request.path  %}active{% endif %}">
+  						<a href="{% url 'upload' %}">
+  						<i class="glyphicon glyphicon-user"></i>
+  						Subir Documento </a>
+  					</li>
+  					<li class="{% if '/profile' == request.path  %}active{% endif %}">
+  						<a href="{% url 'profile' %}">
+  						<i class="glyphicon glyphicon-ok"></i>
+  						Perfil </a>
+  					</li>
+  					<li class="{% if '/about' == request.path  %}active{% endif %}">
+  						<a href="{% url 'about' %}">
+  						<i class="glyphicon glyphicon-flag"></i>
+  						Sobre Blockchain Validator </a>
+  					</li>
+  				</ul>
+  			</div>
+  			<!-- END MENU -->
+  		</div>
+  	</div>
+  	<div class="col-md-9">
+      <div class="profile-content">
+  		   {% block contents %}{% endblock %}
+      </div>
+  	</div>
+  </div>
+</div>
+</body>
+</html>
+<script>
+function get_eth() {
+    $.ajax({
+        type: "GET",
+        url: "/balance",
+    })
+    .done(function(data){
+      $("#balance_eth").html(data['balance'])
+    })
+    .fail(function(){
+      console.log("Error al obtener balance");
+    })
+    ;
+}
+$(document).ready(get_eth);
+</script>

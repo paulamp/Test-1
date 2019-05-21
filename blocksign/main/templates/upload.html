@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block contents %}
+<h1>Subir documento:</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <input type="file" id="documento" name="file">
+  <span id="calculando_hash" style="display:none;">Calculando hash...</span>
+  <p id="text_hash" style="display:none;">El hash del documento es: <br><strong id="hash_doc"></strong></p>
+  <input id="hash" type="hidden" name="hash" value="">
+  <button id="btn_registrar" type="submit" class="btn btn-outline-primero float-right" style="display:none;">Registrar</button>
+</form>
+
+
+<script>
+window.onload = function() {
+  var fileInput = document.getElementById('documento');
+
+  fileInput.addEventListener('change', function(e) {
+    $("#text_hash").hide()
+    $('#calculando_hash').show();
+    var file = fileInput.files[0];
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      var data = reader.result;
+      console.log("DATA");
+			setTimeout(function() {
+				var a = CryptoJSH.SHA256(data, progress, hash_to_string);
+			}, 200);
+    }
+
+    reader.readAsText(file);
+
+  });
+}
+
+var progress = function(p) {
+			var w = ((p * 100).toFixed(0));
+		};
+
+var hash_to_string = function(result) {
+    hashResult = result.toString(CryptoJSH.enc.Hex);
+		$('#calculando_hash').hide();
+	  $('#hash_doc').html(hashResult);
+    $('#hash').val(hashResult);
+    $("#text_hash").show()
+    $("#btn_registrar").show()
+  };
+</script>
+{% endblock %}

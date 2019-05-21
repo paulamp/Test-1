@@ -1,0 +1,20 @@
+{% load staticfiles %}
+
+
+<h1>Sobre Blocksign</h1>
+<div class="centrar d-flex justify-content-center align-items-center">
+  <div class="text-center">
+    <h4 class="mb-3">IDENTIFICATE</h4>
+    <form class="login" action="/login" method="post">
+      {% csrf_token %}
+      <input class="login_inputs" type="text" name="username" placeholder="Usuario">
+      <input class="login_inputs mt-2" type="password" name="password" placeholder="Contraseña">
+      <div class="row text-center mt-2">
+        <div class="col">
+          <button class="btn btn_login" type="submit">Iniciar sesión</button>
+        </div>
+      </div>
+      {% bootstrap_messages %}
+    </form>
+  </div>
+</div>

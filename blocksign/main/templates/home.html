@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load blocksign_tags %}
+
+{% block contents %}
+<h2>Mis Documentos</h2>
+<table class="table text-lefts"  id="table">
+  <thead class="thead">
+    <tr>
+      <th>NOMBRE</th>
+      <th>DUEÑO</th>
+      <th>FECHA</th>
+      <th class="text-center">ESTADO</th>
+      <th class="text-center no-sort">DETALLES</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for d in documents %}
+    <tr >
+      <td>{{ d.name }}</td>
+      <td class="break-word" title="{{ d.minter.user.email }}">
+        {{ d.minter.user.first_name }} {{ d.minter.user.last_name }}
+      </td>
+
+      <td class="text-uppercase" data-order="{{ d.timestamp|get_timestamp }}">{{ d.timestamp|date:"d/m/Y H:i:s" }}</td>
+      <td class="text-center">
+        <i style="color:blue;font-size:12px;"class="fas fa-circle"></i>
+      </td>
+      <td class="text-center">
+        <a class="info_detail" href="{% url 'doc_details' d.hash %}">
+          <i class="fas fa-angle-double-right"></i>
+        </a>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<script>
+$(document).ready(function() {
+  $('#table').DataTable({
+    "order": [],
+      "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false
+      }],
+      "bPaginate": true,
+      "bFilter": false,
+      "bInfo": false,
+      "order": [[ 2, "desc" ]],
+      "dom": '<"top"i>rt<"row"<"col-6 length_input"l><"col-6 text-left"p>><"clear">',
+      "columns": [
+      { "type": "html" },
+      { "type": "html" },
+      { "type": "html" },
+      { "type": "html" },
+      { "type": "html" }
+    ],
+      responsive: true,
+      language: {
+          url: '/static/localisation/es.json'
+      }
+  });
+});
+
+</script>
+{% endblock %}
