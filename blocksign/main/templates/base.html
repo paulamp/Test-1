@@ -27,7 +27,7 @@
     <img src="{% static "images/ok-mark.svg" %}" width="30" height="30" class="d-inline-block align-top" alt="">
     <span class="ml-2">Blockchain Validator</span>
   </a>
-  <a href="/logout">Cerrar sesión</a>
+  <a id="link_logout" href="/logout">Cerrar sesión</a>
 </nav>
 {% bootstrap_messages %}
 <div class="container">
@@ -79,7 +79,7 @@
   			<!-- END MENU -->
   		</div>
   	</div>
-  	<div class="col-md-9">
+  	<div class="col-md-9 content">
       <div class="profile-content">
   		   {% block contents %}{% endblock %}
       </div>

@@ -1,4 +1,6 @@
-
+body{
+  background-color: #922518;
+}
 
 /* Profile container */
 .profile {
@@ -90,7 +92,7 @@
 
 .profile-usermenu ul li a:hover {
   background-color: #fafcfd;
-  color: #3fb7ab;
+  color: #922518;
 }
 
 .profile-usermenu ul li.active {
@@ -113,7 +115,6 @@
   -webkit-border-radius: 10px 10px 10px 10px;
   border: 0px solid #000000;
   height: 100%;
-  overflow-x: scroll;
 }
 
 .nav{
@@ -121,8 +122,8 @@
 }
 
 .depositar{
-  border-color: #3fb7ab;
-  color: #3fb7ab;
+  border-color: #922518;
+  color: #922518;
   background-color: white;
   text-decoration: none;
 }
@@ -130,12 +131,12 @@
 .depositar:hover{
   border-color: white;
   color: white;
-  background-color: #3fb7ab;
+  background-color: #922518;
   text-decoration: none;
 }
 
 a:hover{
-  color: #3fb7ab;
+  color: #922518;
 }
 #balance_eth{
   font-size: 14px;
@@ -143,12 +144,12 @@ a:hover{
 
 .btn-outline-primero{
   background-color: white;
-  color: #3fb7ab;
-  border: 1px solid #3fb7ab;
+  color: #922518;
+  border: 1px solid #922518;
 }
 
 .btn-outline-primero:hover{
-  background-color: #3fb7ab;
+  background-color: #922518;
   color: white;
   border: 1px solid white;
 }
@@ -170,10 +171,24 @@ a:hover{
 .page-item.active .page-link {
   z-index: 1;
   color: #fff;
-  background-color: #3fb7ab;
-  border-color: #3fb7ab;
+  background-color: #922518;
+  border-color: #922518;
 }
 .info_detail{
   font-size: 21px;
   color: black;
+}
+
+.content{
+  height: 600px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+#link_logout{
+  color: black;
+}
+
+table.dataTable thead>tr>th.sorting{
+  padding-right: 0px!important;
 }

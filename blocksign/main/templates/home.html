@@ -7,24 +7,24 @@
 <table class="table text-lefts"  id="table">
   <thead class="thead">
     <tr>
-      <th>NOMBRE</th>
-      <th>DUEÑO</th>
-      <th>FECHA</th>
-      <th class="text-center">ESTADO</th>
+      <th class="text-center">NOMBRE</th>
+      <th class="text-center">DUEÑO</th>
+      <th class="text-center">FECHA</th>
+      <th class="text-center no-sort">ESTADO</th>
       <th class="text-center no-sort">DETALLES</th>
     </tr>
   </thead>
   <tbody>
   {% for d in documents %}
     <tr >
-      <td>{{ d.name }}</td>
-      <td class="break-word" title="{{ d.minter.user.email }}">
+      <td class="text-center">{{ d.name }}</td>
+      <td class="break-word text-center" title="{{ d.minter.user.email }}">
         {{ d.minter.user.first_name }} {{ d.minter.user.last_name }}
       </td>
 
-      <td class="text-uppercase" data-order="{{ d.timestamp|get_timestamp }}">{{ d.timestamp|date:"d/m/Y H:i:s" }}</td>
+      <td class="text-uppercase text-center" data-order="{{ d.timestamp|get_timestamp }}">{{ d.timestamp|date:"d/m/Y H:i:s" }}</td>
       <td class="text-center">
-        <i style="color:blue;font-size:12px;"class="fas fa-circle"></i>
+        <i style="color:blue;font-size:12px;"class="fas fa-circle" title="Registrado en la blockchain"></i>
       </td>
       <td class="text-center">
         <a class="info_detail" href="{% url 'doc_details' d.hash %}">

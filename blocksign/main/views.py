@@ -10,6 +10,7 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.db import IntegrityError
 from main.bc_connector import get_bcobj
 from main.models import *
 
@@ -31,6 +32,28 @@ def login_view(request):
                 return HttpResponseRedirect(reverse('home'))
         messages.error(request, 'Credenciales incorrectos')
     return render(request, 'login.html')
+
+def register_view(request):
+    if request.method == "POST":
+        fist_name = request.POST.get('name', "")
+        last_name = request.POST.get('last_name', "")
+        email = request.POST.get('email', "")
+        password = request.POST.get('password', "")
+        password_2 = request.POST.get('password_2', "")
+        if password != password_2:
+            messages.warning(request, "Las contraseñas no coinciden")
+            return render(request, 'login.html')
+        logger.info(f"Registrando al usuario {email}")
+        sign_user = get_signUser_or_create(email)
+        if sign_user:
+            messages.warning(request, "Este email ya esta registrado")
+            return render(request, 'login.html')
+        sign_user.user.fist_name = fist_name
+        sign_user.user.last_name = last_name
+        sign_user.user.password = password
+        sign_user.user.save()
+        messages.success(request, "Registro realizado con éxito")
+    return HttpResponseRedirect(reverse('root'))
 
 def logout_view(request):
     logout(request)
@@ -189,9 +212,11 @@ def get_signUser_or_create(email):
 
 def get_user_or_create(email):
     try:
+        print(f"busanco el user {email}")
         user = User.objects.get(email=email)
     except:
         user = User()
+        user.username = email
         user.email = email
         user.save()
     return user
