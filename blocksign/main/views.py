@@ -13,6 +13,7 @@ from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
 from main.bc_connector import get_bcobj
 from main.models import *
+from main.emails import validated_email
 
 logger = logging.getLogger('blocksign')
 
@@ -119,14 +120,17 @@ def document_detail(request, hash):
             new_collaborator.collaborator = sign_user
             new_collaborator.tx_id = tx_id
             new_collaborator.save()
+            validated_email(sign_user)
             messages.success(request, "colaborador añadido con éxito")
-
         return render(request, 'doc_detail.html', context)
     except Document.DoesNotExist:
         messages.error(request, "No se ha encontrado este hash en el sistema")
         return render(request, 'doc_detail.html')
     except SCInfo.DoesNotExist:
         messages.error(request, "No se ha encontrado información del SC")
+        return render(request, 'doc_detail.html')
+    except:
+        messages.error(request, "Ha ocurrido un error, contacte con el administrador")
         return render(request, 'doc_detail.html')
 
 

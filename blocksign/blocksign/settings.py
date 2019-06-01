@@ -166,13 +166,7 @@ USE_TZ = True
 
 #EMAIL
 
-SERVER_EMAIL = 'albertosss27@gmail.com'
 
-EMAIL_HOST = 'smtp.gmail.es'
-EMAIL_HOST_USER = 'albertosss27'
-EMAIL_HOST_PASSWORD = 'asdwsdew'
-EMAIL_PORT = 25
-EMAIL_USE_TLS = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/

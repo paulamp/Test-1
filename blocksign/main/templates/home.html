@@ -3,8 +3,12 @@
 {% load blocksign_tags %}
 
 {% block contents %}
-<h2>Mis Documentos</h2>
-<table class="table text-lefts"  id="table">
+<div class="tab">
+  <button class="tablinks active" onclick="openCity(event, 'mis_documentos')">Mis Documentos</button>
+  <button class="tablinks" onclick="openCity(event, 'colaboraciones')">Colaboraciones</button>
+</div>
+<div id="mis_documentos" class="tabcontent">
+  <table class="table text-lefts"  id="table">
   <thead class="thead">
     <tr>
       <th class="text-center">NOMBRE</th>
@@ -35,6 +39,11 @@
   {% endfor %}
   </tbody>
 </table>
+</div>
+
+<div id="colaboraciones" class="tabcontent">
+  <h1>COLABORACIONES</h1>
+</dib>
 <script>
 $(document).ready(function() {
   $('#table').DataTable({
@@ -60,7 +69,27 @@ $(document).ready(function() {
           url: '/static/localisation/es.json'
       }
   });
+  $("#mis_documentos").show()
 });
+
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  console.log(tabcontent);
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  $("#"+cityName).show();
+  evt.currentTarget.className += " active";
+}
 
 </script>
 {% endblock %}
