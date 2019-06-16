@@ -45,7 +45,7 @@ class Connector(object):
             web3 = self.get_w3()
             account =  web3.eth.account.create()
             pk = account.encrypt(passphrase)
-            return account.address, pk
+            return account.address, json.dumps(pk)
         except:
             logger.error(f'Error al crear la cuenta')
             logger.error(traceback.format_exc())

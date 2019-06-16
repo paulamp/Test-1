@@ -12,5 +12,6 @@ urlpatterns = [
     path('profile', views.profile_view, name='profile'),
     path('about', views.about_view, name='about'),
     path('balance', views.balance_view, name='balance'),
+    path('invitation_email/<str:token>/<str:user_id>', views.invitation_email_view, name='invitation_email'),
 
 ]

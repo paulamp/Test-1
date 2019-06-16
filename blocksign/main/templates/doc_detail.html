@@ -19,18 +19,20 @@
         </li>
       {% endfor %}
     </ul>
-    <form class="card p-2" action="" method="post">
-      {% csrf_token %}
-      <div class="input-group">
-        <input type="email" class="form-control" placeholder="Email" name="collaborator_email" required>
-        <div class="input-group-append">
-          <button type="submit" class="btn btn-secondary">Enviar</button>
+    {% if request.user.signuser.address ==  document.minter.address %}
+      <form class="card p-2" action="" method="post">
+        {% csrf_token %}
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Email" name="collaborator_email" required>
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-secondary">Enviar</button>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    {% endif %}
   </div>
   <div class="col-md-8 order-md-1">
-    <h4 class="mb-3">Billing address</h4>
+    <h4 class="mb-3">Detalle del documento</h4>
     <div class="row">
       <div class="col-md-6 mb-3">
         <label for="name">Nombre</label>

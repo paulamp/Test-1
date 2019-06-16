@@ -8,42 +8,78 @@
   <button class="tablinks" onclick="openCity(event, 'colaboraciones')">Colaboraciones</button>
 </div>
 <div id="mis_documentos" class="tabcontent">
-  <table class="table text-lefts"  id="table">
-  <thead class="thead">
-    <tr>
-      <th class="text-center">NOMBRE</th>
-      <th class="text-center">DUEÑO</th>
-      <th class="text-center">FECHA</th>
-      <th class="text-center no-sort">ESTADO</th>
-      <th class="text-center no-sort">DETALLES</th>
-    </tr>
-  </thead>
-  <tbody>
-  {% for d in documents %}
-    <tr >
-      <td class="text-center">{{ d.name }}</td>
-      <td class="break-word text-center" title="{{ d.minter.user.email }}">
-        {{ d.minter.user.first_name }} {{ d.minter.user.last_name }}
-      </td>
-
-      <td class="text-uppercase text-center" data-order="{{ d.timestamp|get_timestamp }}">{{ d.timestamp|date:"d/m/Y H:i:s" }}</td>
-      <td class="text-center">
-        <i style="color:blue;font-size:12px;"class="fas fa-circle" title="Registrado en la blockchain"></i>
-      </td>
-      <td class="text-center">
-        <a class="info_detail" href="{% url 'doc_details' d.hash %}">
-          <i class="fas fa-angle-double-right"></i>
-        </a>
-      </td>
-    </tr>
-  {% endfor %}
-  </tbody>
-</table>
+  {% if documents %}
+    <table class="table text-lefts"  id="table">
+      <thead class="thead">
+        <tr>
+          <th class="text-center">NOMBRE</th>
+          <th class="text-center">DUEÑO</th>
+          <th class="text-center">FECHA</th>
+          <th class="text-center no-sort">ESTADO</th>
+          <th class="text-center no-sort">DETALLES</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for d in documents %}
+          <tr >
+            <td class="text-center">{{ d.name }}</td>
+            <td class="break-word text-center" title="{{ d.minter.user.email }}">
+              {{ d.minter.user.first_name }} {{ d.minter.user.last_name }}
+            </td>
+            <td class="text-uppercase text-center" data-order="{{ d.timestamp|get_timestamp }}">{{ d.timestamp|date:"d/m/Y H:i:s" }}</td>
+            <td class="text-center">
+              <i style="color:blue;font-size:12px;"class="fas fa-circle" title="Registrado en la blockchain"></i>
+            </td>
+            <td class="text-center">
+              <a class="info_detail" href="{% url 'doc_details' d.hash %}">
+                <i class="fas fa-angle-double-right"></i>
+              </a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="text-center mt-3">No hay documentos</p>
+  {% endif %}
 </div>
 
 <div id="colaboraciones" class="tabcontent">
-  <h1>COLABORACIONES</h1>
-</dib>
+  {% if  doc_colaborations%}
+    <table class="table text-lefts"  id="table">
+      <thead class="thead">
+        <tr>
+          <th class="text-center">NOMBRE</th>
+          <th class="text-center">DUEÑO</th>
+          <th class="text-center">FECHA</th>
+          <th class="text-center no-sort">ESTADO</th>
+          <th class="text-center no-sort">DETALLES</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for d in doc_colaborations %}
+          <tr >
+            <td class="text-center">{{ d.name }}</td>
+            <td class="break-word text-center" title="{{ d.minter.user.email }}">
+              {{ d.minter.user.first_name }} {{ d.minter.user.last_name }}
+            </td>
+            <td class="text-uppercase text-center" data-order="{{ d.timestamp|get_timestamp }}">{{ d.timestamp|date:"d/m/Y H:i:s" }}</td>
+            <td class="text-center">
+              <i style="color:blue;font-size:12px;"class="fas fa-circle" title="Registrado en la blockchain"></i>
+            </td>
+            <td class="text-center">
+              <a class="info_detail" href="{% url 'doc_details' d.hash %}">
+                <i class="fas fa-angle-double-right"></i>
+              </a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="text-center mt-3">No hay documentos</p>
+  {% endif %}
+</div>
 <script>
 $(document).ready(function() {
   $('#table').DataTable({

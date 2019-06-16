@@ -1,12 +1,15 @@
 import datetime
 import logging
 import traceback
+import base64
 
 from django.shortcuts import render
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.tokens import default_token_generator
 from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -26,17 +29,37 @@ def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username', None)
         password = request.POST.get('password', None)
+        print(username)
+        print(password)
         if username and password:
             user = authenticate(request, username=username, password=password)
-            if user is not None:
+            if user:
+                print("login")
                 login(request, user)
                 return HttpResponseRedirect(reverse('home'))
         messages.error(request, 'Credenciales incorrectos')
     return render(request, 'login.html')
 
+def invitation_email_view(request, token, user_id):
+    decoded_user_id = urlsafe_base64_decode(user_id).decode()
+    try:
+        user = User.objects.get(pk = decoded_user_id)
+        logger.info(f"Usuario encontrado {user.username}")
+    except:
+        return HttpResponseRedirect(reverse('root'))
+    logout_view(request)
+    if user.first_name:
+        logger.info("Esta usuario ya estaba registrado")
+        return HttpResponseRedirect(reverse('root'))
+    if user and default_token_generator.check_token(user, token):
+        context = {'email': user.email}
+        print("DENTRO DEL IF")
+        return render(request, 'register_user.html', context)
+    return HttpResponseRedirect(reverse('root'))
+
 def register_view(request):
     if request.method == "POST":
-        fist_name = request.POST.get('name', "")
+        first_name = request.POST.get('name', "")
         last_name = request.POST.get('last_name', "")
         email = request.POST.get('email', "")
         password = request.POST.get('password', "")
@@ -44,14 +67,16 @@ def register_view(request):
         if password != password_2:
             messages.warning(request, "Las contraseñas no coinciden")
             return render(request, 'login.html')
-        logger.info(f"Registrando al usuario {email}")
-        sign_user = get_signUser_or_create(email)
-        if sign_user:
+        try:
+            User.objects.get(username=email)
             messages.warning(request, "Este email ya esta registrado")
             return render(request, 'login.html')
-        sign_user.user.fist_name = fist_name
+        except:
+            logger.info(f"Registrando al usuario {email}")
+        sign_user = get_signUser_or_create(email)
+        sign_user.user.first_name = first_name
         sign_user.user.last_name = last_name
-        sign_user.user.password = password
+        sign_user.user.set_password(password)
         sign_user.user.save()
         messages.success(request, "Registro realizado con éxito")
     return HttpResponseRedirect(reverse('root'))
@@ -75,8 +100,11 @@ def balance_view(request):
 @login_required
 def home_view(request):
     documents = Document.objects.filter(minter=request.user.signuser)
+    colaborations = CollaboratorDocument.objects.filter(collaborator=request.user.signuser)
+    colaboration_documents = [colaboration.document for colaboration in colaborations]
     context = {
-        'documents': documents
+        'documents': documents,
+        'doc_colaborations': colaboration_documents,
     }
     return render(request, 'home.html', context)
 
@@ -95,6 +123,10 @@ def document_detail(request, hash):
                 logger.info("No se ha especificado el email del colaborador")
                 messages.warning(request, "No se ha especificado el email del colaborador")
                 return render(request, 'doc_detail.html', context)
+            if collaborator_email == request.user.email:
+                logger.info("No te puedes añadir de colaborador a ti mismo")
+                messages.warning(request, "No te puedes añadir de colaborador a ti mismo")
+                return render(request, 'doc_detail.html', context)
             sign_user = get_signUser_or_create(collaborator_email)
             sc_sign = SCInfo.objects.get(name="Sign")
             bc_values = BCValue.objects.first()
@@ -105,7 +137,7 @@ def document_detail(request, hash):
             bcobj = get_bcobj()
             try:
                 logger.info("Comprobando existencia del colaborador en el documento en la BC ...")
-                exists = bcobj.call(sc_sign.abi, sc_sign.address, "hashValidatorUser", b_hash, sc_sign.address)
+                exists = bcobj.call(sc_sign.abi, sc_sign.address, "hashValidatorUser", b_hash, sign_user.address)
             except:
                 messages.warning(request, "Error al comprobar si existe este colaborador en la BC")
                 logger.error(traceback.format_exc())
@@ -115,12 +147,12 @@ def document_detail(request, hash):
                 return render(request, 'doc_detail.html', context)
             tx_id = bcobj.transact(sc_sign, bc_values.gas, bc_values.gas_price, "addValidatorUser", request.user.signuser, b_hash, sign_user.address)
             logger.info(f"Added Collaborator Tx -> {tx_id}")
+            validated_email(sign_user)
             new_collaborator = CollaboratorDocument()
             new_collaborator.document = document
             new_collaborator.collaborator = sign_user
             new_collaborator.tx_id = tx_id
             new_collaborator.save()
-            validated_email(sign_user)
             messages.success(request, "colaborador añadido con éxito")
         return render(request, 'doc_detail.html', context)
     except Document.DoesNotExist:
@@ -131,6 +163,7 @@ def document_detail(request, hash):
         return render(request, 'doc_detail.html')
     except:
         messages.error(request, "Ha ocurrido un error, contacte con el administrador")
+        logger.error(traceback.format_exc())
         return render(request, 'doc_detail.html')
 
 
@@ -216,7 +249,7 @@ def get_signUser_or_create(email):
 
 def get_user_or_create(email):
     try:
-        print(f"busanco el user {email}")
+        print(f"Buscando el user {email}")
         user = User.objects.get(email=email)
     except:
         user = User()

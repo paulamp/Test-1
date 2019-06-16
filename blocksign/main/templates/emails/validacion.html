@@ -6,10 +6,10 @@
   </head>
   <body>
     <p>Estimado/a, </p>
-    <p>Has sido invitado por {{ admin.first_name}} {{ admin.last_name }} a colaborar en unos de sus docuementos.
-      Para formalizar su invitación, por favor acceda al siguiente enlace para realizar el proceso de registro:
+    <p>Has sido invitado por {{ owner.first_name}} {{ owner.last_name }} a colaborar en unos de sus docuementos.
+      Para formalizar su invitación, por favor acceda al siguiente enlace:
     <p>
-    <a href="http://localhost:8000/register_user/{{invitation.secret}}">http://localhost:8000/register_user/{{invitation.secret}}</a>
+    <a href="http://localhost:8000/invitation_email/{{token}}/{{user_id}}">http://localhost:8000/invitation_email/{{token}}/{{user_id}}</a>
     <p>Reciba un cordial saludo,</p>
     <p>Equipo de Blockchain validator.</p>
   </body>

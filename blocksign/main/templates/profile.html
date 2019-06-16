@@ -2,7 +2,29 @@
 {% load staticfiles %}
 
 {% block contents %}
-<h1>Perfil</h1>
-<h2>{{ request.user.username }}</h2>
-<h2> {{request.user.signuser }}</h2>
+<div class="row">
+  <div class="col-md-8 order-md-1">
+    <h4 class="mb-3">Perfil de usuario</h4>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" id="name"  value="{{request.user.first_name}}" readonly>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="owner">Apellidos</label>
+        <input type="text" class="form-control" id="owner" value="{{request.user.last_name}}" readonly>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="email">Correo electrónico</label>
+      <input type="text" class="form-control" id="email" value="{{request.user.email}}" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="hash">Address</label>
+      <input type="text" class="form-control" id="hash" value="{{request.user.signuser.address}}" readonly>
+    </div>
+  </div>
+</div>
 {% endblock %}
