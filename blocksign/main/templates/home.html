@@ -4,10 +4,56 @@
 
 {% block contents %}
 <div class="tab">
-  <button class="tablinks active" onclick="openCity(event, 'mis_documentos')">Mis Documentos</button>
-  <button class="tablinks" onclick="openCity(event, 'colaboraciones')">Colaboraciones</button>
+  <button class="tablinks {% if not show_col %}active{% endif %}" onclick="openCity(event, 'mis_documentos')">Mis Documentos</button>
+  <button class="tablinks {% if show_col %}active{% endif %}" onclick="openCity(event, 'colaboraciones')">Colaboraciones</button>
 </div>
 <div id="mis_documentos" class="tabcontent">
+  <a  class="btn filter_btn float-right" data-toggle="collapse" href="#collapseExample" role="button">
+    Filtros <i class="fas fa-filter"></i>
+  </a>
+  <form method="post">
+    {% csrf_token %}
+    <div class="collapse show" id="collapseExample">
+      <div class="card card-body">
+        <div class="row filters">
+          <div class="col-4">
+            <label for="fromdate">Desde</label>
+            <input type="text" autocomplete="off" oninput="compareDate1()" name="fecha_inicio_mis" class="form-control date_form" id="fecha_inicio_mis" value="{{fecha_inicio_mis}}">
+          </div>
+          <div class="col-4">
+            <label for="untildate">Hasta</label>
+            <input type="text" autocomplete="off" oninput="compareDate1()" name="fecha_fin_mis" class="form-control date_form" id="fecha_fin_mis" value="{{fecha_fin_mis}}">
+          </div>
+          <div class="col-4">
+            <div id="alertDate1" class="row justify-content-center" hidden>
+              <div class="alert alert-danger" role="alert">
+                La fecha de fin ha de ser posterior a la de inicio.
+              </div>
+            </div>
+          </div>
+          <div class="col-5 mt-2">
+            <label for="name_doc">Nombre</label>
+            <input type="text" class="form-control" name="name_doc_mis" id="name_doc_mis" value="{% if name_doc_mis %}{{name_doc_mis}}{% endif %}">
+          </div>
+          <div class="col-5 mt-2">
+            <label for="name_doc">Estado</label>
+            <select class="form-control" name="estado_doc_mis" id="estado_doc_mis">
+              <option {% if not estado_selected_mis %}selected{% endif %}></option>
+              {% for estado in estados_doc  %}
+                <option value="{{estado.id}}" {% if estado_selected_mis == estado.id %}selected{% endif %}>{{estado.name}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-8"></div>
+          <div class="col-4 buttons_filter">
+            <button id="submitButton1" type="submit" class="btn depositar btn-sm float-right">Aplicar</button>
+            <button onclick="clearAll()" class="btn btn_clean btn-sm mr-2 float-right">Limpiar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
   {% if documents %}
     <table class="table text-lefts"  id="table">
       <thead class="thead">
@@ -28,7 +74,12 @@
             </td>
             <td class="text-uppercase text-center" data-order="{{ d.timestamp|get_timestamp }}">{{ d.timestamp|date:"d/m/Y H:i:s" }}</td>
             <td class="text-center">
-              <i style="color:blue;font-size:12px;"class="fas fa-circle" title="Registrado en la blockchain"></i>
+              {% if d.status.name == "Confirmado" %}
+                <i style="color:blue;font-size:12px;" class="fas fa-circle" title="Registrado en la blockchain"></i>
+
+              {% else %}
+                <i style="color:gray;font-size:12px;" class="fas fa-spinner" title="Pendiente de ser confirmado en la blockchain"></i>
+              {% endif %}
             </td>
             <td class="text-center">
               <a class="info_detail" href="{% url 'doc_details' d.hash %}">
@@ -45,6 +96,52 @@
 </div>
 
 <div id="colaboraciones" class="tabcontent">
+  <a  class="btn filter_btn float-right" data-toggle="collapse" href="#collapseExample" role="button">
+    Filtros <i class="fas fa-filter"></i>
+  </a>
+  <form method="post">
+    {% csrf_token %}
+    <div class="collapse show" id="collapseExample">
+      <div class="card card-body">
+        <div class="row filters">
+          <div class="col-4">
+            <label for="fromdate">Desde</label>
+            <input type="text" autocomplete="off" oninput="compareDate2()" name="fecha_inicio_col" class="form-control date_form" id="fecha_inicio_col" value="{{fecha_inicio_col}}">
+          </div>
+          <div class="col-4">
+            <label for="untildate">Hasta</label>
+            <input type="text" autocomplete="off" oninput="compareDate2()" name="fecha_fin_col" class="form-control date_form" id="fecha_fin_col" value="{{fecha_fin_col}}">
+          </div>
+          <div class="col-4">
+            <div id="alertDate2" class="row justify-content-center" hidden>
+              <div class="alert alert-danger" role="alert">
+                La fecha de fin ha de ser posterior a la de inicio.
+              </div>
+            </div>
+          </div>
+          <div class="col-5 mt-2">
+            <label for="name_doc">Nombre</label>
+            <input type="text" class="form-control" name="name_doc_col" id="name_doc_col" value="{% if name_doc_col %}{{name_doc_col}}{% endif %}">
+          </div>
+          <div class="col-5 mt-2">
+            <label for="name_doc">Estado</label>
+            <select class="form-control" name="estado_doc_col" id="estado_doc_col">
+              <option {% if not estado_selected_col %}selected{% endif %}></option>
+              {% for estado in estados_doc  %}
+                <option value="{{estado.id}}" {% if estado_selected_col == estado.id %}selected{% endif %}>{{estado.name}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-8"></div>
+          <div class="col-4 buttons_filter">
+            <button id="submitButton2" type="submit" class="btn depositar btn-sm float-right">Aplicar</button>
+            <button onclick="clearAll()" class="btn btn_clean btn-sm mr-2 float-right">Limpiar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
   {% if  doc_colaborations%}
     <table class="table text-lefts"  id="table">
       <thead class="thead">
@@ -105,7 +202,47 @@ $(document).ready(function() {
           url: '/static/localisation/es.json'
       }
   });
-  $("#mis_documentos").show()
+  $('#fecha_inicio_mis').datepicker({
+      todayBtn: false,
+      clearBtn: true,
+      autoclose: true,
+      language: "es"
+    }).on('changeDate',function(){
+      compareDate1();
+    });
+
+    $('#fecha_fin_mis').datepicker({
+      todayBtn: false,
+      clearBtn: true,
+      autoclose: true,
+      language: "es"
+    }).on('changeDate',function(){
+      compareDate1();
+    });
+
+    $('#fecha_inicio_col').datepicker({
+        todayBtn: false,
+        clearBtn: true,
+        autoclose: true,
+        language: "es"
+      }).on('changeDate',function(){
+        compareDate2();
+      });
+
+      $('#fecha_fin_col').datepicker({
+        todayBtn: false,
+        clearBtn: true,
+        autoclose: true,
+        language: "es"
+      }).on('changeDate',function(){
+        compareDate2();
+      });
+  if("{{show_col}}" == "True"){
+    $("#colaboraciones").show()
+  }else{
+    $("#mis_documentos").show()
+  }
+
 });
 
 function openCity(evt, cityName) {
@@ -127,5 +264,48 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
+function compareDate1(){
+    console.log("compareDate");
+    var date1 = $('#fecha_inicio_mis').val().split('/');
+    var date2 = $('#fecha_fin_mis').val().split('/');
+
+    if (new Date (date1[2], date1[1], date1[0]) > new Date (date2[2], date2[1], date2[0])){
+      $('#submitButton1').attr('disabled', true);
+      $('#alertDate1').attr('hidden', false);
+
+    }else{
+      $('#submitButton1').attr('disabled', false);
+      $('#alertDate1').attr('hidden', true);
+
+    }
+  }
+
+  function compareDate2(){
+      console.log("compareDate");
+      var date1 = $('#fecha_inicio_col').val().split('/');
+      var date2 = $('#fecha_fin_col').val().split('/');
+
+      if (new Date (date1[2], date1[1], date1[0]) > new Date (date2[2], date2[1], date2[0])){
+        $('#submitButton2').attr('disabled', true);
+        $('#alertDate2').attr('hidden', false);
+
+      }else{
+        $('#submitButton2').attr('disabled', false);
+        $('#alertDate2').attr('hidden', true);
+
+      }
+    }
+
+  function clearAll(){
+    $('#fecha_inicio_mis').val('');
+    $('#fecha_fin_mis').val('');
+    $('#name_doc_mis').val('');
+    $('#estado_doc_mis').val('');
+
+    $('#fecha_inicio_col').val('');
+    $('#fecha_fin_col').val('');
+    $('#name_doc_col').val('');
+    $('#estado_doc_col').val('');
+  };
 </script>
 {% endblock %}

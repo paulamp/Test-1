@@ -6,17 +6,24 @@ class SignUser(models.Model):
     address = models.CharField(max_length=42)
     passphrase = models.CharField(max_length=30, default="aabbcc11")
     private_key = models.TextField(null=True, blank=True)
-    avatar = models.ImageField(upload_to='user_%Y_%m', null=True, blank=True)
+    avatar = models.ImageField(upload_to='user/%Y_%m', null=True, blank=True)
 
     def __str__(self):
         return f'{self.user.email}- {self.address}'
+
+class DocumentStatus(models.Model):
+    name = models.CharField(max_length=66, unique=True)
+
+    def __str__(self):
+        return f'{self.name}'
 
 class Document(models.Model):
     hash = models.CharField(max_length=66, primary_key=True)
     minter = models.ForeignKey(SignUser, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
+    document = models.FileField(upload_to='documents/%Y_%m', verbose_name='Documento')
     tx_id = models.CharField(max_length=66, unique=True)
-    status = models.CharField(default="Pending", max_length=44)
+    status = models.ForeignKey(DocumentStatus, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 
     def __str__(self):

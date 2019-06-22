@@ -99,12 +99,63 @@ def balance_view(request):
 
 @login_required
 def home_view(request):
-    documents = Document.objects.filter(minter=request.user.signuser)
-    colaborations = CollaboratorDocument.objects.filter(collaborator=request.user.signuser)
-    colaboration_documents = [colaboration.document for colaboration in colaborations]
+    show_col = False
+    fecha_inicio_mis = request.POST.get("fecha_inicio_mis", '')
+    fecha_fin_mis = request.POST.get("fecha_fin_mis", '')
+    name_doc_mis = request.POST.get("name_doc_mis")
+    estado_doc_mis = request.POST.get("estado_doc_mis")
+
+    fecha_inicio_col = request.POST.get("fecha_inicio_col", '')
+    fecha_fin_col = request.POST.get("fecha_fin_col", '')
+    name_doc_col = request.POST.get("name_doc_col")
+    estado_doc_col = request.POST.get("estado_doc_col")
+
+    q_filter_mis = {'minter': request.user.signuser}
+    if fecha_inicio_mis:
+        q_filter_mis['timestamp__gte'] = string_to_date(fecha_inicio_mis)
+    if fecha_fin_mis:
+        q_filter_mis['timestamp__lte'] = string_to_date(fecha_fin_mis)
+    if name_doc_mis:
+        q_filter_mis['name__contains'] = name_doc_mis
+    if estado_doc_mis:
+        estado_doc_mis = int(estado_doc_mis)
+        q_filter_mis['status__id'] = estado_doc_mis
+
+    q_filter_col = {}
+    if fecha_inicio_col:
+        show_col = True
+        q_filter_col['timestamp__gte'] = string_to_date(fecha_inicio_col)
+    if fecha_fin_col:
+        show_col = True
+        q_filter_col['timestamp__lte'] = string_to_date(fecha_fin_col)
+    if name_doc_col:
+        show_col = True
+        q_filter_col['name__contains'] = name_doc_col
+    if estado_doc_col:
+        show_col = True
+        estado_doc_col = int(estado_doc_col)
+        q_filter_col['status__id'] = estado_doc_col
+
+    documents = Document.objects.filter(**q_filter_mis)
+
+    colaborations = CollaboratorDocument.objects.filter(collaborator=request.user.signuser).values('document__hash')
+    q_filter_col['hash__in'] = colaborations
+    colaboration_documents = Document.objects.filter(**q_filter_col)
+    estados_doc = DocumentStatus.objects.all()
     context = {
         'documents': documents,
         'doc_colaborations': colaboration_documents,
+        'estados_doc':estados_doc,
+        'estado_selected_mis': estado_doc_mis,
+        'estado_selected_col': estado_doc_col,
+        'fecha_inicio_mis' : fecha_inicio_mis,
+        'fecha_fin_mis' : fecha_fin_mis,
+        'name_doc_mis' : name_doc_mis,
+        'fecha_inicio_col' : fecha_inicio_col,
+        'fecha_fin_col' : fecha_fin_col,
+        'name_doc_col' : name_doc_col,
+        'show_col': show_col,
+
     }
     return render(request, 'home.html', context)
 
@@ -187,6 +238,11 @@ def upload_view(request):
         if not bc_values:
             messages.error(request, "No se ha encontrado información sobre la BC")
             return render(request, 'upload.html')
+        try:
+            status = DocumentStatus.objects.get(name="Pendiente")
+        except:
+            messages.error(request, "No se ha encontrado el estado 'Pendiente' en la app")
+            return render(request, 'upload.html')
         b_hash = bytes.fromhex(hash)
         bcobj = get_bcobj()
         try:
@@ -211,8 +267,10 @@ def upload_view(request):
         new_document = Document()
         new_document.hash = hash
         new_document.minter = request.user.signuser
-        new_document.name = filename
+        new_document.name = filename #coge el nombre
+        new_document.document = filename #gurada el documento
         new_document.tx_id = tx_id
+        new_document.status = status
         new_document.save()
         messages.success(request, "Documento registrado con éxito")
     return render(request, 'upload.html')
@@ -257,3 +315,6 @@ def get_user_or_create(email):
         user.email = email
         user.save()
     return user
+
+def string_to_date(date_str):
+    return datetime.datetime.strptime(date_str, '%d/%m/%Y').date()
