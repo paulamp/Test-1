@@ -13,7 +13,7 @@
         <li class="list-group-item d-flex justify-content-between lh-condensed">
           <div>
             <h6 class="my-0">{{collaborator.collaborator.user.email}}</h6>
-            <small class="text-muted">Brief description</small>
+            <small class="text-muted"></small>
           </div>
           <span class="text-muted"><i class="fas fa-spinner"></i></span>
         </li>
@@ -34,19 +34,27 @@
   <div class="col-md-8 order-md-1">
     <h4 class="mb-3">Detalle del documento</h4>
     <div class="row">
-      <div class="col-md-6 mb-3">
+      <div class="col-8 mb-3">
         <label for="name">Nombre</label>
         <input type="text" class="form-control" id="name"  value="{{document.name}}" readonly>
       </div>
+      <div class="col-4 mb-3">
+        <label>Descargar</label>
+        <div id="box_download">
+          <a class="text-center" id="download" href="{{document.document.url}}" target="_blank">Pincha aqui <i class="fas fa-file-download"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
       <div class="col-md-6 mb-3">
         <label for="owner">Dueño</label>
         <input type="text" class="form-control" id="owner" value="{{document.minter.user.first_name}} {{document.minter.user.last_name}}" readonly>
       </div>
-    </div>
-
-    <div class="mb-3">
-      <label for="email">Email de contacto</label>
-      <input type="text" class="form-control" id="email" value="{{document.minter.user.email}}" readonly>
+      <div class="col-6 mb-3">
+        <label for="email">Email de contacto</label>
+        <input type="text" class="form-control" id="email" value="{{document.minter.user.email}}" readonly>
+      </div>
     </div>
 
     <div class="mb-3">

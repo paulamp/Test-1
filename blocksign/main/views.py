@@ -47,13 +47,14 @@ def invitation_email_view(request, token, user_id):
         logger.info(f"Usuario encontrado {user.username}")
     except:
         return HttpResponseRedirect(reverse('root'))
-    logout_view(request)
+    logout(request)
     if user.first_name:
         logger.info("Esta usuario ya estaba registrado")
         return HttpResponseRedirect(reverse('root'))
+    print(default_token_generator.check_token(user, token))
     if user and default_token_generator.check_token(user, token):
+        logger.info(f"Necesita registrarse {user.username}")
         context = {'email': user.email}
-        print("DENTRO DEL IF")
         return render(request, 'register_user.html', context)
     return HttpResponseRedirect(reverse('root'))
 
@@ -64,15 +65,17 @@ def register_view(request):
         email = request.POST.get('email', "")
         password = request.POST.get('password', "")
         password_2 = request.POST.get('password_2', "")
+        is_invitation = request.POST.get('is_invitation', "")
         if password != password_2:
             messages.warning(request, "Las contraseñas no coinciden")
             return render(request, 'login.html')
-        try:
-            User.objects.get(username=email)
-            messages.warning(request, "Este email ya esta registrado")
-            return render(request, 'login.html')
-        except:
-            logger.info(f"Registrando al usuario {email}")
+        if not is_invitation:
+            try:
+                User.objects.get(username=email)
+                messages.warning(request, "Este email ya esta registrado")
+                return render(request, 'login.html')
+            except:
+                logger.info(f"Registrando al usuario {email}")
         sign_user = get_signUser_or_create(email)
         sign_user.user.first_name = first_name
         sign_user.user.last_name = last_name
@@ -198,7 +201,7 @@ def document_detail(request, hash):
                 return render(request, 'doc_detail.html', context)
             tx_id = bcobj.transact(sc_sign, bc_values.gas, bc_values.gas_price, "addValidatorUser", request.user.signuser, b_hash, sign_user.address)
             logger.info(f"Added Collaborator Tx -> {tx_id}")
-            validated_email(sign_user)
+            validated_email(sign_user, request.user)
             new_collaborator = CollaboratorDocument()
             new_collaborator.document = document
             new_collaborator.collaborator = sign_user
@@ -277,12 +280,12 @@ def upload_view(request):
 
 @login_required
 def profile_view(request):
-    if request.user.is_authenticated:
-        return render(request, 'profile.html')
-    return HttpResponseRedirect(reverse('root'))
-
-def about_view(request):
-    return render(request, 'about.html')
+    if request.method == "POST":
+        if 'avatar' in request.FILES:
+            avatar = request.FILES['avatar']
+            request.user.signuser.avatar = avatar
+            request.user.signuser.save()
+    return render(request, 'profile.html')
 
 #############
 ##FUNCTIONS##

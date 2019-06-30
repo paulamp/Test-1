@@ -25,9 +25,7 @@ body{
   margin: 0 auto;
   width: 50%;
   height: 50%;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  border-radius: 50% !important;
+  
 }
 
 .profile-usertitle {
@@ -265,11 +263,37 @@ input.date_form{
 .filter_btn:focus{
   box-shadow: 0px 0px 0px 0px rgba(0,0,0,0)!important;
 }
+
 .filter_btn:hover{
   color: black
 }
+
 .buttons_filter{
   margin-top: -35px;
   margin-right: -86px;
   margin-left: 59px;
+}
+
+#box_download{
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+#download{
+  color: black;
+  font-size: 16px;
+}
+
+#avatar{
+  font-size: 65%;
 }

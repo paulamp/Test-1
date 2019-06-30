@@ -42,6 +42,20 @@ class CollaboratorDocument(models.Model):
     def __str__(self):
         return f'{self.document.name} - {self.collaborator.user.email}'
 
+class CollaboratorAction(models.Model):
+    document = models.ForeignKey(Document, on_delete=models.CASCADE)
+    collaborator = models.ForeignKey(SignUser, on_delete=models.CASCADE)
+    tx_id = models.CharField(max_length=66, null=True)
+    timestamp = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    status = models.CharField(default="Pending", max_length=44)
+    comment = models.TextField(max_length=500)
+
+    class Meta:
+        unique_together = ('document', 'collaborator')
+
+    def __str__(self):
+        return f'{self.document.name} - {self.collaborator.user.email}'
+
 class SCInfo(models.Model):
     name = models.CharField(max_length=80, primary_key=True)
     address = models.CharField(max_length=42)

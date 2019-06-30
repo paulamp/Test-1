@@ -1,4 +1,6 @@
 from django.urls import path
+from django.conf.urls.static import static
+from blocksign import settings
 from . import views
 
 urlpatterns = [
@@ -10,8 +12,9 @@ urlpatterns = [
     path('home/doc_details/<str:hash>', views.document_detail, name='doc_details'),
     path('upload', views.upload_view, name='upload'),
     path('profile', views.profile_view, name='profile'),
-    path('about', views.about_view, name='about'),
     path('balance', views.balance_view, name='balance'),
     path('invitation_email/<str:token>/<str:user_id>', views.invitation_email_view, name='invitation_email'),
 
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
