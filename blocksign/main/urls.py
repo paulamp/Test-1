@@ -10,6 +10,7 @@ urlpatterns = [
     path('register', views.register_view, name='register'),
     path('home', views.home_view, name='home'),
     path('home/doc_details/<str:hash>', views.document_detail, name='doc_details'),
+    path('add_comment', views.add_comment_view, name='add_comment'),
     path('upload', views.upload_view, name='upload'),
     path('profile', views.profile_view, name='profile'),
     path('balance', views.balance_view, name='balance'),

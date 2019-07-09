@@ -49,9 +49,7 @@ class CollaboratorAction(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     status = models.CharField(default="Pending", max_length=44)
     comment = models.TextField(max_length=500)
-
-    class Meta:
-        unique_together = ('document', 'collaborator')
+    view = models.BooleanField(default=False)
 
     def __str__(self):
         return f'{self.document.name} - {self.collaborator.user.email}'

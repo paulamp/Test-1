@@ -7550,3 +7550,899 @@ INFO 2019-06-30 12:31:50,756 basehttp 11485 140374475585280 "GET /static/images/
 INFO 2019-06-30 12:31:51,359 basehttp 11485 140374475585280 "GET /balance HTTP/1.1" 200 16
 INFO 2019-06-30 12:31:53,743 basehttp 11485 140374475585280 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6138
 INFO 2019-06-30 12:31:54,151 basehttp 11485 140374467192576 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:39:42,046 basehttp 12311 140490998507264 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6157
+INFO 2019-06-30 12:39:42,691 bc_connector 12311 140490990114560 No existe, creando obj para la conexion con la blockchain
+INFO 2019-06-30 12:39:42,723 basehttp 12311 140490998507264 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 12:39:43,251 basehttp 12311 140490990114560 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:50:31,395 basehttp 12802 139839061333760 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 302 0
+WARNING 2019-06-30 12:50:31,418 base 12802 139839061333760 Not Found: /login/
+WARNING 2019-06-30 12:50:31,420 basehttp 12802 139839061333760 "GET /login/?next=/home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 404 3986
+WARNING 2019-06-30 12:50:31,480 base 12802 139839061333760 Not Found: /favicon.ico
+WARNING 2019-06-30 12:50:31,481 basehttp 12802 139839061333760 "GET /favicon.ico HTTP/1.1" 404 3913
+INFO 2019-06-30 12:50:42,478 basehttp 12802 139839061333760 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 302 0
+WARNING 2019-06-30 12:50:42,497 base 12802 139839061333760 Not Found: /login/
+WARNING 2019-06-30 12:50:42,498 basehttp 12802 139839061333760 "GET /login/?next=/home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 404 3986
+INFO 2019-06-30 12:50:52,833 basehttp 12802 139839061333760 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 302 0
+WARNING 2019-06-30 12:50:52,843 base 12802 139839061333760 Not Found: /login/
+WARNING 2019-06-30 12:50:52,844 basehttp 12802 139839061333760 "GET /login/?next=/home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 404 3986
+INFO 2019-06-30 12:51:03,829 basehttp 12802 139839061333760 "GET /login HTTP/1.1" 200 3622
+INFO 2019-06-30 12:51:03,859 basehttp 12802 139839061333760 "GET /static/css/login.css HTTP/1.1" 200 810
+INFO 2019-06-30 12:51:27,593 views 12802 139839061333760 Registrando al usuario prueba3134@es.com
+INFO 2019-06-30 12:51:27,718 bc_connector 12802 139839061333760 No existe, creando obj para la conexion con la blockchain
+INFO 2019-06-30 12:51:29,268 basehttp 12802 139839061333760 "POST /register HTTP/1.1" 302 0
+INFO 2019-06-30 12:51:29,272 basehttp 12802 139839061333760 "GET / HTTP/1.1" 302 0
+INFO 2019-06-30 12:51:29,279 basehttp 12802 139839061333760 "GET /login HTTP/1.1" 200 3838
+INFO 2019-06-30 12:51:41,742 basehttp 12802 139839061333760 "POST /login HTTP/1.1" 302 0
+INFO 2019-06-30 12:51:41,774 basehttp 12802 139839061333760 "GET /home HTTP/1.1" 200 12337
+INFO 2019-06-30 12:51:41,803 basehttp 12802 139838950987520 "GET /static/images/default_user.png HTTP/1.1" 200 7118
+INFO 2019-06-30 12:51:41,805 basehttp 12802 139839061333760 "GET /static/css/main.css HTTP/1.1" 200 4623
+INFO 2019-06-30 12:51:41,824 basehttp 12802 139839047067392 "GET /static/js/crypto-js.js HTTP/1.1" 200 10889
+INFO 2019-06-30 12:51:41,830 basehttp 12802 139838967772928 "GET /static/js/moment.js HTTP/1.1" 200 155543
+INFO 2019-06-30 12:51:41,843 basehttp 12802 139838959380224 "GET /static/images/ok-mark.svg HTTP/1.1" 200 1442
+INFO 2019-06-30 12:51:42,186 basehttp 12802 139838967772928 "GET /static/images/calendar.svg HTTP/1.1" 200 1951
+INFO 2019-06-30 12:51:42,715 basehttp 12802 139838959380224 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:51:57,264 basehttp 12802 139838959380224 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 5560
+INFO 2019-06-30 12:51:57,601 basehttp 12802 139838959380224 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:52:01,227 basehttp 12802 139838959380224 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 5560
+INFO 2019-06-30 12:52:01,457 basehttp 12802 139838959380224 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:52:02,144 basehttp 12802 139838959380224 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 5560
+INFO 2019-06-30 12:52:02,341 basehttp 12802 139838959380224 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:52:03,036 basehttp 12802 139838959380224 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 5560
+INFO 2019-06-30 12:52:03,223 basehttp 12802 139838959380224 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:52:17,983 basehttp 12954 140448834328320 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 5560
+INFO 2019-06-30 12:52:18,064 bc_connector 12954 140448834328320 No existe, creando obj para la conexion con la blockchain
+INFO 2019-06-30 12:52:18,593 basehttp 12954 140448834328320 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:52:25,487 basehttp 12954 140448834328320 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 5560
+INFO 2019-06-30 12:52:25,687 basehttp 12954 140448834328320 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:52:25,709 basehttp 12954 140448814143232 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 5560
+INFO 2019-06-30 12:52:25,908 basehttp 12954 140448834328320 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 5560
+INFO 2019-06-30 12:52:25,933 basehttp 12954 140448814143232 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:52:26,089 basehttp 12954 140448834328320 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 5560
+INFO 2019-06-30 12:52:26,131 basehttp 12954 140448814143232 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:52:26,302 basehttp 12954 140448814143232 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:53:56,475 basehttp 13038 140714119345920 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6225
+INFO 2019-06-30 12:53:56,859 basehttp 13038 140714119345920 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 12:53:56,860 bc_connector 13038 140714110953216 No existe, creando obj para la conexion con la blockchain
+INFO 2019-06-30 12:53:57,399 basehttp 13038 140714110953216 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:54:22,277 basehttp 13038 140714110953216 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6289
+INFO 2019-06-30 12:54:22,639 basehttp 13038 140714110953216 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 12:54:22,771 basehttp 13038 140714119345920 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 12:56:16,255 basehttp 13038 140714119345920 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6344
+INFO 2019-06-30 12:56:16,587 basehttp 13038 140714119345920 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 12:56:16,724 basehttp 13038 140714110953216 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:06:41,053 basehttp 13038 140714110953216 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6343
+INFO 2019-06-30 13:06:41,076 basehttp 13038 140714119345920 "GET /static/css/main.css HTTP/1.1" 200 4849
+INFO 2019-06-30 13:06:41,088 basehttp 13038 140714119345920 "GET /static/js/crypto-js.js HTTP/1.1" 200 10889
+INFO 2019-06-30 13:06:41,089 basehttp 13038 140714090505984 "GET /static/images/ok-mark.svg HTTP/1.1" 200 1442
+INFO 2019-06-30 13:06:41,091 basehttp 13038 140714082113280 "GET /static/images/default_user.png HTTP/1.1" 200 7118
+INFO 2019-06-30 13:06:41,092 basehttp 13038 140714110953216 "GET /static/js/moment.js HTTP/1.1" 200 155543
+INFO 2019-06-30 13:06:41,597 basehttp 13038 140714082113280 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:06:41,667 basehttp 13038 140714110953216 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:07:08,037 basehttp 13038 140714110953216 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6343
+INFO 2019-06-30 13:07:08,060 basehttp 13038 140714082113280 "GET /static/css/main.css HTTP/1.1" 200 4859
+INFO 2019-06-30 13:07:08,510 basehttp 13038 140714110953216 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:07:08,649 basehttp 13038 140714082113280 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:07:36,780 basehttp 13038 140714082113280 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6343
+INFO 2019-06-30 13:07:36,805 basehttp 13038 140714110953216 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-06-30 13:07:37,246 basehttp 13038 140714082113280 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:07:37,375 basehttp 13038 140714110953216 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:08:17,536 basehttp 13038 140714110953216 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6343
+INFO 2019-06-30 13:08:17,557 basehttp 13038 140714082113280 "GET /static/css/main.css HTTP/1.1" 200 4869
+INFO 2019-06-30 13:08:17,976 basehttp 13038 140714110953216 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:08:18,154 basehttp 13038 140714082113280 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:08:28,082 basehttp 13038 140714082113280 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6343
+INFO 2019-06-30 13:08:28,110 basehttp 13038 140714110953216 "GET /static/css/main.css HTTP/1.1" 200 4879
+INFO 2019-06-30 13:08:28,531 basehttp 13038 140714082113280 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:08:28,811 basehttp 13038 140714110953216 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:08:39,411 basehttp 13038 140714110953216 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6343
+INFO 2019-06-30 13:08:39,435 basehttp 13038 140714082113280 "GET /static/css/main.css HTTP/1.1" 200 4889
+INFO 2019-06-30 13:08:39,837 basehttp 13038 140714110953216 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:08:39,973 basehttp 13038 140714082113280 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:11:28,880 basehttp 13038 140714082113280 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6413
+INFO 2019-06-30 13:11:28,902 basehttp 13038 140714110953216 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-06-30 13:11:29,248 basehttp 13038 140714082113280 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:11:29,404 basehttp 13038 140714110953216 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:12:02,777 basehttp 13038 140714110953216 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6410
+INFO 2019-06-30 13:12:02,799 basehttp 13038 140714082113280 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-06-30 13:12:03,109 basehttp 13038 140714110953216 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:12:03,255 basehttp 13038 140714082113280 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:12:32,653 basehttp 13038 140714082113280 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6442
+INFO 2019-06-30 13:12:32,675 basehttp 13038 140714110953216 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-06-30 13:12:32,992 basehttp 13038 140714082113280 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:12:33,131 basehttp 13038 140714110953216 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:13:14,773 basehttp 13038 140714110953216 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6448
+INFO 2019-06-30 13:13:14,791 basehttp 13038 140714082113280 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-06-30 13:13:15,162 basehttp 13038 140714110953216 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:13:15,299 basehttp 13038 140714082113280 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:14:09,636 basehttp 13038 140714082113280 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6462
+INFO 2019-06-30 13:14:09,657 basehttp 13038 140714110953216 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-06-30 13:14:10,020 basehttp 13038 140714082113280 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:14:10,150 basehttp 13038 140714110953216 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:14:50,097 basehttp 13038 140714110953216 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6472
+INFO 2019-06-30 13:14:50,112 basehttp 13038 140714082113280 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-06-30 13:14:50,485 basehttp 13038 140714110953216 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:14:50,613 basehttp 13038 140714082113280 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:14:59,839 basehttp 13038 140714082113280 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6475
+INFO 2019-06-30 13:15:00,239 basehttp 13038 140714082113280 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:15:00,478 basehttp 13038 140714110953216 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:15:08,461 basehttp 13038 140714110953216 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6478
+INFO 2019-06-30 13:15:08,871 basehttp 13038 140714110953216 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:15:09,005 basehttp 13038 140714082113280 "GET /balance HTTP/1.1" 200 16
+INFO 2019-06-30 13:19:26,005 basehttp 13038 140714082113280 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 6478
+INFO 2019-06-30 13:19:26,025 basehttp 13038 140714110953216 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-06-30 13:19:26,337 basehttp 13038 140714082113280 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-06-30 13:19:26,473 basehttp 13038 140714110953216 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 18:22:15,400 basehttp 13783 140065506113280 "GET / HTTP/1.1" 302 0
+INFO 2019-07-08 18:22:15,634 basehttp 13783 140065497720576 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 18:22:15,727 basehttp 13783 140065497720576 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-08 18:22:15,728 basehttp 13783 140065506113280 "GET /static/images/default_user.png HTTP/1.1" 304 0
+INFO 2019-07-08 18:22:15,821 basehttp 13783 140065506113280 "GET /static/images/ok-mark.svg HTTP/1.1" 304 0
+INFO 2019-07-08 18:22:16,024 basehttp 13783 140065506113280 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 18:22:16,645 basehttp 13783 140065497720576 "GET /static/localisation/es.json HTTP/1.1" 304 0
+INFO 2019-07-08 18:22:16,656 bc_connector 13783 140065497720576 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-08 18:22:16,689 basehttp 13783 140065506113280 "GET /static/images/calendar.svg HTTP/1.1" 304 0
+INFO 2019-07-08 18:22:16,807 basehttp 13783 140065506113280 "GET /static/images/ico.png HTTP/1.1" 304 0
+INFO 2019-07-08 18:22:17,908 basehttp 13783 140065497720576 "GET /balance HTTP/1.1" 200 16
+ERROR 2019-07-08 18:28:23,884 views 13783 140065497720576 Traceback (most recent call last):
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compile_func = self.tags[command]
+KeyError: 'trans'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alberto/Test-1/blocksign/main/views.py", line 216, in document_detail
+    return render(request, 'doc_detail.html', context)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 533, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 104: 'trans', expected 'endblock'. Did you forget to register or load this tag?
+
+ERROR 2019-07-08 18:28:23,890 exception 13783 140065497720576 Internal Server Error: /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1
+Traceback (most recent call last):
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compile_func = self.tags[command]
+KeyError: 'trans'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alberto/Test-1/blocksign/main/views.py", line 216, in document_detail
+    return render(request, 'doc_detail.html', context)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 533, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 104: 'trans', expected 'endblock'. Did you forget to register or load this tag?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compile_func = self.tags[command]
+KeyError: 'trans'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alberto/Test-1/blocksign/main/views.py", line 226, in document_detail
+    return render(request, 'doc_detail.html')
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 477, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/template/base.py", line 533, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 104: 'trans', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2019-07-08 18:28:24,080 basehttp 13783 140065497720576 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 500 288999
+WARNING 2019-07-08 18:28:24,720 base 13783 140065506113280 Not Found: /favicon.ico
+WARNING 2019-07-08 18:28:24,720 basehttp 13783 140065506113280 "GET /favicon.ico HTTP/1.1" 404 3913
+INFO 2019-07-08 18:28:52,974 basehttp 13783 140065506113280 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 7832
+INFO 2019-07-08 18:28:53,655 basehttp 13783 140065497720576 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 18:28:57,342 basehttp 13783 140065497720576 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 7595
+INFO 2019-07-08 18:28:57,571 basehttp 13783 140065497720576 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-08 18:28:57,693 basehttp 13783 140065506113280 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 18:29:10,643 basehttp 13783 140065506113280 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 7506
+INFO 2019-07-08 18:29:10,855 basehttp 13783 140065506113280 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-08 18:29:11,081 basehttp 13783 140065497720576 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 18:36:08,488 basehttp 13783 140065497720576 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 8745
+INFO 2019-07-08 18:36:08,861 basehttp 13783 140065497720576 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-08 18:36:09,000 basehttp 13783 140065506113280 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 18:36:35,049 basehttp 13783 140065506113280 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 8745
+INFO 2019-07-08 18:36:35,431 basehttp 13783 140065506113280 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-08 18:36:35,570 basehttp 13783 140065497720576 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 18:36:43,960 basehttp 13783 140065497720576 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 8745
+INFO 2019-07-08 18:36:44,210 basehttp 13783 140065497720576 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-08 18:36:44,342 basehttp 13783 140065506113280 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 18:36:53,046 basehttp 13783 140065506113280 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 8742
+INFO 2019-07-08 18:36:53,388 basehttp 13783 140065506113280 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-08 18:36:53,526 basehttp 13783 140065497720576 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 18:37:47,905 basehttp 13783 140065497720576 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 9000
+INFO 2019-07-08 18:37:48,260 basehttp 13783 140065497720576 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-08 18:37:48,413 basehttp 13783 140065506113280 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 18:38:03,984 basehttp 13783 140065506113280 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 9006
+INFO 2019-07-08 18:38:04,323 basehttp 13783 140065506113280 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-08 18:38:04,474 basehttp 13783 140065497720576 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:31:26,985 basehttp 15729 140081193813760 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 9773
+INFO 2019-07-08 19:31:27,634 bc_connector 15729 140081185158912 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-08 19:31:27,652 basehttp 15729 140081193813760 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-08 19:31:28,371 basehttp 15729 140081185158912 "GET /balance HTTP/1.1" 200 16
+ERROR 2019-07-08 19:32:19,703 exception 15729 140081185158912 Internal Server Error: /add_commente
+Traceback (most recent call last):
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alberto/Test-1/blocksign/main/views.py", line 318, in add_comment_view
+    tx_id = bcobj.transact(sc_sign, bc_values.gas, bc_values.gas_price, "addValidationUser", request.user.signuser, hash, request.user.signuser.address, comment)
+NameError: name 'bcobj' is not defined
+ERROR 2019-07-08 19:32:19,801 basehttp 15729 140081185158912 "POST /add_commente HTTP/1.1" 500 77912
+INFO 2019-07-08 19:33:13,056 basehttp 15839 140420779390720 "GET /add_commente HTTP/1.1" 302 0
+INFO 2019-07-08 19:33:13,112 basehttp 15839 140420770735872 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 19:33:13,513 bc_connector 15839 140420770735872 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-08 19:33:14,676 basehttp 15839 140420770735872 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:33:17,588 basehttp 15839 140420770735872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 9773
+INFO 2019-07-08 19:33:17,959 basehttp 15839 140420779390720 "GET /balance HTTP/1.1" 200 16
+ERROR 2019-07-08 19:33:21,251 exception 15839 140420779390720 Internal Server Error: /add_commente
+Traceback (most recent call last):
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alberto/Test-1/blocksign/main/views.py", line 319, in add_comment_view
+    tx_id = bcobj.transact(sc_sign, bc_values.gas, bc_values.gas_price, "addValidationUser", request.user.signuser, hash, request.user.signuser.address, comment)
+  File "/home/alberto/Test-1/blocksign/main/bc_connector.py", line 97, in transact
+    tx = web3.eth.sendRawTransaction(signed.rawTransaction).hex()
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/web3/eth.py", line 274, in sendRawTransaction
+    [raw_transaction],
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/web3/manager.py", line 110, in request_blocking
+    raise ValueError(response["error"])
+ValueError: {'code': -32000, 'message': 'insufficient funds for gas * price + value'}
+ERROR 2019-07-08 19:33:21,329 basehttp 15839 140420779390720 "POST /add_commente HTTP/1.1" 500 95338
+INFO 2019-07-08 19:33:27,236 basehttp 15839 140420770735872 "GET /add_commente HTTP/1.1" 302 0
+INFO 2019-07-08 19:33:27,264 basehttp 15839 140420779390720 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 19:33:27,653 basehttp 15839 140420779390720 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:33:46,455 basehttp 15839 140420779390720 "GET /profile HTTP/1.1" 200 5260
+INFO 2019-07-08 19:33:46,927 basehttp 15839 140420770735872 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:35:25,818 basehttp 15839 140420770735872 "GET /profile HTTP/1.1" 200 5260
+INFO 2019-07-08 19:35:26,147 basehttp 15839 140420770735872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-08 19:35:26,268 basehttp 15839 140420779390720 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:40:21,911 basehttp 15839 140420779390720 "GET /logout HTTP/1.1" 302 0
+INFO 2019-07-08 19:40:21,917 basehttp 15839 140420770735872 "GET / HTTP/1.1" 302 0
+INFO 2019-07-08 19:40:21,953 basehttp 15839 140420770735872 "GET /login HTTP/1.1" 200 3622
+INFO 2019-07-08 19:40:21,985 basehttp 15839 140420770735872 "GET /static/css/login.css HTTP/1.1" 304 0
+INFO 2019-07-08 19:40:37,982 views 15839 140420770735872 Registrando al usuario paulapliegom@gmail.com
+INFO 2019-07-08 19:40:39,672 basehttp 15839 140420770735872 "POST /register HTTP/1.1" 302 0
+INFO 2019-07-08 19:40:39,678 basehttp 15839 140420779390720 "GET / HTTP/1.1" 302 0
+INFO 2019-07-08 19:40:39,705 basehttp 15839 140420779390720 "GET /login HTTP/1.1" 200 3838
+INFO 2019-07-08 19:40:48,337 basehttp 15839 140420779390720 "POST /login HTTP/1.1" 302 0
+INFO 2019-07-08 19:40:48,376 basehttp 15839 140420770735872 "GET /home HTTP/1.1" 200 12331
+INFO 2019-07-08 19:40:48,823 basehttp 15839 140420770735872 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:40:56,227 basehttp 15839 140420770735872 "GET /profile HTTP/1.1" 200 5245
+INFO 2019-07-08 19:40:56,723 basehttp 15839 140420779390720 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:43:13,041 basehttp 15839 140420779390720 "GET /logout HTTP/1.1" 302 0
+INFO 2019-07-08 19:43:13,045 basehttp 15839 140420770735872 "GET / HTTP/1.1" 302 0
+INFO 2019-07-08 19:43:13,055 basehttp 15839 140420770735872 "GET /login HTTP/1.1" 200 3622
+INFO 2019-07-08 19:43:19,158 basehttp 15839 140420770735872 "POST /login HTTP/1.1" 302 0
+INFO 2019-07-08 19:43:19,209 basehttp 15839 140420779390720 "GET /home HTTP/1.1" 200 16731
+INFO 2019-07-08 19:43:19,266 basehttp 15839 140420779390720 "GET /media/user/2019_06/default_user.png HTTP/1.1" 304 0
+INFO 2019-07-08 19:43:19,646 basehttp 15839 140420779390720 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-08 19:43:21,779 basehttp 15839 140420779390720 "GET /profile HTTP/1.1" 200 5265
+INFO 2019-07-08 19:43:22,322 basehttp 15839 140420770735872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-08 19:46:42,449 basehttp 15839 140420770735872 "GET /logout HTTP/1.1" 302 0
+INFO 2019-07-08 19:46:42,454 basehttp 15839 140420779390720 "GET / HTTP/1.1" 302 0
+INFO 2019-07-08 19:46:42,465 basehttp 15839 140420779390720 "GET /login HTTP/1.1" 200 3622
+INFO 2019-07-08 19:46:48,450 basehttp 15839 140420779390720 "POST /login HTTP/1.1" 302 0
+INFO 2019-07-08 19:46:48,483 basehttp 15839 140420770735872 "GET /home HTTP/1.1" 200 12331
+INFO 2019-07-08 19:46:48,920 basehttp 15839 140420770735872 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:46:51,943 basehttp 15839 140420770735872 "GET /logout HTTP/1.1" 302 0
+INFO 2019-07-08 19:46:51,952 basehttp 15839 140420779390720 "GET / HTTP/1.1" 302 0
+INFO 2019-07-08 19:46:51,963 basehttp 15839 140420779390720 "GET /login HTTP/1.1" 200 3622
+INFO 2019-07-08 19:46:59,034 basehttp 15839 140420779390720 "POST /login HTTP/1.1" 302 0
+INFO 2019-07-08 19:46:59,094 basehttp 15839 140420770735872 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 19:46:59,566 basehttp 15839 140420770735872 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:47:01,688 basehttp 15839 140420770735872 "GET /profile HTTP/1.1" 200 5260
+INFO 2019-07-08 19:47:02,171 basehttp 15839 140420779390720 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:47:24,680 basehttp 15839 140420779390720 "GET /profile HTTP/1.1" 200 5260
+INFO 2019-07-08 19:47:25,023 basehttp 15839 140420779390720 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-08 19:47:25,161 basehttp 15839 140420770735872 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:47:28,913 basehttp 15839 140420770735872 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 19:47:29,280 basehttp 15839 140420779390720 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:47:30,826 basehttp 15839 140420779390720 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 9773
+INFO 2019-07-08 19:47:31,238 basehttp 15839 140420770735872 "GET /balance HTTP/1.1" 200 16
+ERROR 2019-07-08 19:47:34,456 exception 15839 140420770735872 Internal Server Error: /add_commente
+Traceback (most recent call last):
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alberto/Test-1/blocksign/main/views.py", line 320, in add_comment_view
+    logger.info(f"{filename} Tx -> {tx_id}")
+NameError: name 'filename' is not defined
+ERROR 2019-07-08 19:47:34,502 basehttp 15839 140420770735872 "POST /add_commente HTTP/1.1" 500 78236
+INFO 2019-07-08 19:48:12,311 basehttp 16672 140298213345024 "GET /add_commente HTTP/1.1" 302 0
+INFO 2019-07-08 19:48:12,368 basehttp 16672 140298204952320 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 19:48:12,759 bc_connector 16672 140298204952320 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-08 19:48:13,349 basehttp 16672 140298204952320 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:48:24,872 basehttp 16714 140018011879168 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 19:48:25,257 basehttp 16714 140018011879168 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-08 19:48:25,261 bc_connector 16714 140018003486464 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-08 19:48:25,812 basehttp 16714 140018003486464 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:48:27,186 basehttp 16714 140018003486464 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 9772
+INFO 2019-07-08 19:48:27,640 basehttp 16714 140018011879168 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:48:30,567 views 16714 140018011879168 Tx -> 0x30ee2f2ec0cd5b43e430ba653a948af5c02cc53b1fbfd88a5ee810cdb382b6b0
+ERROR 2019-07-08 19:48:30,569 exception 16714 140018011879168 Internal Server Error: /add_comment
+Traceback (most recent call last):
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 305, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: main_collaboratoraction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alberto/Test-1/blocksign/main/views.py", line 326, in add_comment_view
+    new_action.save()
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/models/base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/models/base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/models/base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/models/query.py", line 1128, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 305, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: main_collaboratoraction
+ERROR 2019-07-08 19:48:30,732 basehttp 16714 140018011879168 "POST /add_comment HTTP/1.1" 500 161570
+INFO 2019-07-08 19:55:46,874 basehttp 17032 140160506218240 "GET /add_comment HTTP/1.1" 302 0
+INFO 2019-07-08 19:55:46,932 basehttp 17032 140160497825536 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 19:55:47,504 bc_connector 17032 140160497825536 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-08 19:55:48,051 basehttp 17032 140160497825536 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:56:11,826 basehttp 17032 140160497825536 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 9772
+INFO 2019-07-08 19:56:12,862 basehttp 17032 140160506218240 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 19:56:15,459 views 17032 140160506218240 Tx -> 0x67ba9d6b0c2236de0f06afd0acca7eb25bb53e589362e7b12090a7b0fdd91348
+INFO 2019-07-08 19:56:15,594 basehttp 17032 140160506218240 "POST /add_comment HTTP/1.1" 302 0
+INFO 2019-07-08 19:56:15,626 basehttp 17032 140160497825536 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 9772
+INFO 2019-07-08 19:56:15,955 basehttp 17032 140160497825536 "GET /balance HTTP/1.1" 200 16
+INFO 2019-07-08 20:20:28,588 basehttp 17403 140689837930240 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 20:20:28,992 bc_connector 17403 140689829537536 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-08 20:20:30,190 basehttp 17403 140689829537536 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-08 20:20:31,642 basehttp 17403 140689829537536 "GET /logout HTTP/1.1" 302 0
+INFO 2019-07-08 20:20:31,648 basehttp 17403 140689837930240 "GET / HTTP/1.1" 302 0
+INFO 2019-07-08 20:20:31,726 basehttp 17403 140689837930240 "GET /login HTTP/1.1" 200 3622
+INFO 2019-07-08 20:20:37,484 basehttp 17403 140689837930240 "POST /login HTTP/1.1" 302 0
+INFO 2019-07-08 20:20:37,533 basehttp 17403 140689829537536 "GET /home HTTP/1.1" 200 16957
+INFO 2019-07-08 20:20:37,936 basehttp 17403 140689829537536 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-08 20:47:29,208 basehttp 18499 139792362784512 "GET / HTTP/1.1" 302 0
+INFO 2019-07-08 20:47:29,218 basehttp 18499 139792362784512 "GET /login HTTP/1.1" 200 3622
+INFO 2019-07-08 20:47:29,365 basehttp 18499 139792362784512 "GET /static/css/login.css HTTP/1.1" 200 810
+INFO 2019-07-08 20:47:29,558 basehttp 18499 139792362784512 "GET / HTTP/1.1" 302 0
+INFO 2019-07-08 20:47:29,568 basehttp 18499 139792362784512 "GET /login HTTP/1.1" 200 3622
+INFO 2019-07-08 20:47:37,171 basehttp 18499 139792362784512 "POST /login HTTP/1.1" 302 0
+INFO 2019-07-08 20:47:37,229 basehttp 18499 139792362784512 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 20:47:37,265 basehttp 18499 139792362784512 "GET /static/css/main.css HTTP/1.1" 200 4889
+INFO 2019-07-08 20:47:37,278 basehttp 18499 139792351147776 "GET /static/js/crypto-js.js HTTP/1.1" 200 10889
+INFO 2019-07-08 20:47:37,284 basehttp 18499 139792342755072 "GET /static/js/moment.js HTTP/1.1" 200 155543
+INFO 2019-07-08 20:47:37,297 basehttp 18499 139792125785856 "GET /static/images/ok-mark.svg HTTP/1.1" 200 1442
+INFO 2019-07-08 20:47:37,362 basehttp 18499 139792117393152 "GET /static/images/default_user.png HTTP/1.1" 200 7118
+INFO 2019-07-08 20:47:37,785 bc_connector 18499 139792125785856 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-08 20:47:37,997 basehttp 18499 139792117393152 "GET /static/localisation/es.json HTTP/1.1" 200 946
+INFO 2019-07-08 20:47:38,036 basehttp 18499 139792342755072 "GET /static/images/calendar.svg HTTP/1.1" 200 1951
+INFO 2019-07-08 20:47:38,618 basehttp 18499 139792125785856 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-08 20:47:41,729 basehttp 18499 139792125785856 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 9772
+INFO 2019-07-08 20:47:42,135 basehttp 18499 139792125785856 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-08 20:47:43,610 basehttp 18499 139792125785856 "POST /add_comment HTTP/1.1" 302 0
+INFO 2019-07-08 20:47:43,638 basehttp 18499 139792125785856 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 10001
+INFO 2019-07-08 20:47:43,845 basehttp 18499 139792125785856 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-08 20:48:48,760 basehttp 18727 140100299523840 "POST /add_comment HTTP/1.1" 302 0
+INFO 2019-07-08 20:48:48,795 basehttp 18727 140100299523840 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 10001
+INFO 2019-07-08 20:48:48,874 bc_connector 18727 140100299523840 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-08 20:48:49,735 basehttp 18727 140100299523840 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-08 20:49:39,059 bc_connector 18824 139931604457216 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-08 20:49:41,076 views 18824 139931604457216 Tx -> 0x1c9cec56d8529db48ed071bb396728f5dae12572591abf8a7568b00b59c3d178
+ERROR 2019-07-08 20:49:41,224 exception 18824 139931604457216 Internal Server Error: /add_comment
+Traceback (most recent call last):
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/alberto/envs/tfm/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/alberto/Test-1/blocksign/main/views.py", line 333, in add_comment_view
+    document.status = status
+NameError: name 'status' is not defined
+ERROR 2019-07-08 20:49:41,354 basehttp 18824 139931604457216 "POST /add_comment HTTP/1.1" 500 78265
+INFO 2019-07-08 20:50:00,642 basehttp 18869 140541911152384 "GET /add_comment HTTP/1.1" 302 0
+INFO 2019-07-08 20:50:00,702 basehttp 18869 140541900039936 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 20:50:00,915 bc_connector 18869 140541900039936 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-08 20:50:01,524 basehttp 18869 140541900039936 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-08 20:50:03,389 basehttp 18869 140541900039936 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 9772
+INFO 2019-07-08 20:50:03,702 basehttp 18869 140541900039936 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-08 20:50:07,021 views 18869 140541900039936 Tx -> 0x560ddb59c50d836df08148176b36e9518822a3e14c190baf66316bec93f6c286
+INFO 2019-07-08 20:50:07,293 basehttp 18869 140541900039936 "POST /add_comment HTTP/1.1" 302 0
+INFO 2019-07-08 20:50:07,326 basehttp 18869 140541900039936 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 9770
+INFO 2019-07-08 20:50:07,567 basehttp 18869 140541900039936 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-08 20:50:10,525 basehttp 18869 140541900039936 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 20:50:10,772 basehttp 18869 140541900039936 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-08 20:51:19,663 basehttp 18869 140541900039936 "GET /home HTTP/1.1" 200 14242
+INFO 2019-07-08 20:51:20,004 basehttp 18869 140541900039936 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-08 20:51:52,233 basehttp 18869 140541900039936 "GET /home HTTP/1.1" 200 14326
+INFO 2019-07-08 20:51:52,835 basehttp 18869 140541900039936 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-09 18:36:06,113 basehttp 6141 139924585395968 "GET / HTTP/1.1" 302 0
+INFO 2019-07-09 18:36:06,519 basehttp 6141 139924577003264 "GET /home HTTP/1.1" 200 16747
+INFO 2019-07-09 18:36:07,072 basehttp 6141 139924585395968 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 18:36:07,104 basehttp 6141 139924577003264 "GET /home HTTP/1.1" 200 16747
+INFO 2019-07-09 18:36:07,823 bc_connector 6141 139924577003264 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-09 18:36:08,546 basehttp 6141 139924577003264 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 18:56:53,552 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 10801
+INFO 2019-07-09 18:56:54,045 bc_connector 7410 140516887541504 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-09 18:56:54,734 basehttp 7410 140516887541504 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 18:57:34,623 basehttp 7410 140516887541504 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 10834
+INFO 2019-07-09 18:57:35,032 basehttp 7410 140516887541504 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 18:57:35,145 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 18:57:44,266 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 10831
+INFO 2019-07-09 18:57:44,602 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 18:57:44,738 basehttp 7410 140516887541504 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:03:34,285 basehttp 7410 140516887541504 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11268
+INFO 2019-07-09 19:03:34,776 basehttp 7410 140516887541504 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:03:34,937 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:03:40,379 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11268
+INFO 2019-07-09 19:03:40,404 basehttp 7410 140516887541504 "GET /static/css/main.css HTTP/1.1" 200 4935
+INFO 2019-07-09 19:03:40,437 basehttp 7410 140516850308864 "GET /media/user/2019_06/default_user.png HTTP/1.1" 200 7118
+INFO 2019-07-09 19:03:40,452 basehttp 7410 140516895934208 "GET /static/js/crypto-js.js HTTP/1.1" 200 10889
+INFO 2019-07-09 19:03:40,463 basehttp 7410 140516858701568 "GET /static/images/ok-mark.svg HTTP/1.1" 200 1442
+INFO 2019-07-09 19:03:40,476 basehttp 7410 140516867094272 "GET /static/js/moment.js HTTP/1.1" 200 155543
+INFO 2019-07-09 19:03:41,034 basehttp 7410 140516858701568 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11268
+INFO 2019-07-09 19:03:41,062 basehttp 7410 140516867094272 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:03:41,065 basehttp 7410 140516858701568 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:03:41,503 basehttp 7410 140516858701568 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:03:41,651 basehttp 7410 140516867094272 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:03:54,488 basehttp 7410 140516867094272 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11268
+INFO 2019-07-09 19:03:54,505 basehttp 7410 140516858701568 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:03:54,905 basehttp 7410 140516867094272 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:03:55,055 basehttp 7410 140516858701568 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:03:59,999 basehttp 7410 140516858701568 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11268
+INFO 2019-07-09 19:04:00,014 basehttp 7410 140516867094272 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:04:00,398 basehttp 7410 140516867094272 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11268
+INFO 2019-07-09 19:04:00,586 basehttp 7410 140516858701568 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:04:00,865 basehttp 7410 140516867094272 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:04:00,990 basehttp 7410 140516858701568 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:04:01,583 basehttp 7410 140516858701568 "GET / HTTP/1.1" 302 0
+INFO 2019-07-09 19:04:01,608 basehttp 7410 140516858701568 "GET /login HTTP/1.1" 200 3622
+INFO 2019-07-09 19:04:01,875 basehttp 7410 140516858701568 "GET /static/css/login.css HTTP/1.1" 200 810
+INFO 2019-07-09 19:04:02,094 basehttp 7410 140516858701568 "GET / HTTP/1.1" 302 0
+INFO 2019-07-09 19:04:02,102 basehttp 7410 140516858701568 "GET /login HTTP/1.1" 200 3622
+INFO 2019-07-09 19:04:10,031 basehttp 7410 140516858701568 "POST /login HTTP/1.1" 302 0
+INFO 2019-07-09 19:04:10,071 basehttp 7410 140516858701568 "GET /home HTTP/1.1" 200 14307
+INFO 2019-07-09 19:04:10,106 basehttp 7410 140516858701568 "GET /static/css/main.css HTTP/1.1" 200 4935
+INFO 2019-07-09 19:04:10,108 basehttp 7410 140516850308864 "GET /static/images/ok-mark.svg HTTP/1.1" 200 1442
+INFO 2019-07-09 19:04:10,108 basehttp 7410 140516867094272 "GET /static/js/crypto-js.js HTTP/1.1" 200 10889
+INFO 2019-07-09 19:04:10,111 basehttp 7410 140516895934208 "GET /static/js/moment.js HTTP/1.1" 200 155543
+INFO 2019-07-09 19:04:10,147 basehttp 7410 140516498863872 "GET /static/images/default_user.png HTTP/1.1" 200 7118
+INFO 2019-07-09 19:04:10,658 basehttp 7410 140516498863872 "GET /static/localisation/es.json HTTP/1.1" 200 946
+INFO 2019-07-09 19:04:10,713 basehttp 7410 140516895934208 "GET /static/images/calendar.svg HTTP/1.1" 200 1951
+INFO 2019-07-09 19:04:11,205 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-09 19:04:12,784 basehttp 7410 140516498863872 "GET /profile HTTP/1.1" 200 5260
+INFO 2019-07-09 19:04:13,109 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-09 19:05:03,232 basehttp 7410 140516498863872 "POST /profile HTTP/1.1" 200 5264
+INFO 2019-07-09 19:05:03,260 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:05:03,261 basehttp 7410 140516895934208 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 200 10186
+INFO 2019-07-09 19:05:03,598 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-09 19:05:09,859 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11268
+INFO 2019-07-09 19:05:09,881 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:05:10,317 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:05:10,448 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:05:14,283 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11268
+INFO 2019-07-09 19:05:14,821 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:05:37,755 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11259
+INFO 2019-07-09 19:05:37,784 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:05:37,785 basehttp 7410 140516895934208 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 200 10186
+INFO 2019-07-09 19:05:38,299 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:05:38,451 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:06:09,243 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11283
+INFO 2019-07-09 19:06:09,278 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:06:09,303 basehttp 7410 140516498863872 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 304 0
+INFO 2019-07-09 19:06:09,816 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:06:09,950 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:10:15,292 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11835
+INFO 2019-07-09 19:10:15,322 basehttp 7410 140516895934208 "GET /static/css/main.css HTTP/1.1" 200 4971
+INFO 2019-07-09 19:10:15,327 basehttp 7410 140516498863872 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 304 0
+INFO 2019-07-09 19:10:15,831 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:10:15,974 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:10:23,705 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11835
+INFO 2019-07-09 19:10:23,730 basehttp 7410 140516895934208 "GET /static/css/main.css HTTP/1.1" 200 4971
+INFO 2019-07-09 19:10:24,255 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:10:24,404 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:10:32,274 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11835
+INFO 2019-07-09 19:10:32,308 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 200 4971
+INFO 2019-07-09 19:10:32,808 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:10:32,953 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:10:49,003 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11835
+INFO 2019-07-09 19:10:49,038 basehttp 7410 140516895934208 "GET /static/css/main.css HTTP/1.1" 200 4991
+INFO 2019-07-09 19:10:49,042 basehttp 7410 140516498863872 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 304 0
+INFO 2019-07-09 19:10:49,565 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:10:49,714 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:12:25,740 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11835
+INFO 2019-07-09 19:12:25,940 basehttp 7410 140516895934208 "GET /static/css/main.css HTTP/1.1" 200 5006
+INFO 2019-07-09 19:12:25,951 basehttp 7410 140516895934208 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 304 0
+INFO 2019-07-09 19:12:26,541 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:12:26,765 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:13:02,182 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11853
+INFO 2019-07-09 19:13:02,206 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:13:02,640 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:13:02,798 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:16:26,544 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11853
+INFO 2019-07-09 19:16:26,729 basehttp 7410 140516895934208 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 304 0
+INFO 2019-07-09 19:16:26,789 basehttp 7410 140516895934208 "GET /static/css/main.css HTTP/1.1" 200 5118
+INFO 2019-07-09 19:16:27,315 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:16:27,442 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:17:02,665 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11853
+INFO 2019-07-09 19:17:02,688 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 200 5118
+INFO 2019-07-09 19:17:03,144 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:17:03,282 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:17:16,618 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11853
+INFO 2019-07-09 19:17:16,640 basehttp 7410 140516895934208 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:17:17,031 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:17:17,175 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:18:29,645 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 11961
+INFO 2019-07-09 19:18:29,662 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 200 5169
+INFO 2019-07-09 19:18:29,666 basehttp 7410 140516498863872 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 304 0
+INFO 2019-07-09 19:18:30,114 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:18:30,327 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:19:17,525 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 12138
+INFO 2019-07-09 19:19:17,564 basehttp 7410 140516895934208 "GET /static/css/main.css HTTP/1.1" 200 5169
+INFO 2019-07-09 19:19:17,623 basehttp 7410 140516895934208 "GET /static/js/crypto-js.js HTTP/1.1" 200 10889
+INFO 2019-07-09 19:19:17,630 basehttp 7410 140516498863872 "GET /static/js/moment.js HTTP/1.1" 200 155543
+INFO 2019-07-09 19:19:17,667 basehttp 7410 140516895934208 "GET /media/user/2019_06/default_user.png HTTP/1.1" 200 7118
+INFO 2019-07-09 19:19:17,677 basehttp 7410 140516498863872 "GET /static/images/ok-mark.svg HTTP/1.1" 200 1442
+INFO 2019-07-09 19:19:17,843 basehttp 7410 140516498863872 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 200 10186
+INFO 2019-07-09 19:19:20,926 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:19:21,050 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:19:38,674 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 12138
+INFO 2019-07-09 19:19:38,700 basehttp 7410 140516895934208 "GET /static/css/main.css HTTP/1.1" 200 5171
+INFO 2019-07-09 19:19:39,171 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:19:39,367 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:20:18,334 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 12138
+INFO 2019-07-09 19:20:18,361 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 200 5171
+INFO 2019-07-09 19:20:18,819 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:20:19,002 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:21:34,362 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 12225
+INFO 2019-07-09 19:21:36,324 basehttp 7410 140516498863872 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 304 0
+INFO 2019-07-09 19:21:36,376 basehttp 7410 140516895934208 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:21:39,084 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:21:39,209 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:21:48,681 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 12282
+INFO 2019-07-09 19:21:48,705 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:21:49,173 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:21:49,315 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:22:16,652 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 12198
+INFO 2019-07-09 19:22:16,679 basehttp 7410 140516895934208 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:22:17,126 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:22:17,290 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:22:40,167 basehttp 7410 140516895934208 "GET / HTTP/1.1" 302 0
+INFO 2019-07-09 19:22:42,180 basehttp 7410 140516498863872 "GET /home HTTP/1.1" 200 16728
+INFO 2019-07-09 19:22:42,315 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:23:05,779 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 13584
+INFO 2019-07-09 19:23:06,242 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:23:06,374 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:23:32,863 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 13584
+INFO 2019-07-09 19:23:32,895 basehttp 7410 140516895934208 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 304 0
+INFO 2019-07-09 19:23:32,895 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 200 5171
+INFO 2019-07-09 19:23:33,321 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:23:33,451 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:26:13,750 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 13692
+INFO 2019-07-09 19:26:13,997 basehttp 7410 140516895934208 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 304 0
+INFO 2019-07-09 19:26:14,068 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:26:14,643 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:26:15,010 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:26:21,709 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 13695
+INFO 2019-07-09 19:26:22,201 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:26:22,329 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:26:46,160 basehttp 7410 140516895934208 "GET /upload HTTP/1.1" 200 5226
+INFO 2019-07-09 19:26:46,241 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:26:46,778 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:26:48,767 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:27:09,373 basehttp 7410 140516498863872 "GET /home HTTP/1.1" 200 16728
+INFO 2019-07-09 19:27:09,394 basehttp 7410 140516895934208 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:27:09,852 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:27:09,983 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:27:11,995 basehttp 7410 140516895934208 "GET /home HTTP/1.1" 200 16728
+INFO 2019-07-09 19:27:12,479 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:27:12,593 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:27:21,274 basehttp 7410 140516498863872 "GET /home HTTP/1.1" 200 16729
+INFO 2019-07-09 19:27:21,764 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:27:21,917 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:30:59,623 basehttp 7410 140516895934208 "GET /home/doc_details/21adac7d78455a141e23bced025fb9791601e68aebdd8d21248981a43d35d676 HTTP/1.1" 200 9652
+INFO 2019-07-09 19:30:59,642 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:31:00,181 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:31:03,192 views 7410 140516498863872 Comprobando existencia del colaborador en el documento en la BC ...
+INFO 2019-07-09 19:31:04,898 views 7410 140516498863872 Added Collaborator Tx -> 0xf170197a83511e79f5320997f43142e6cfde4a637f815b8ad64f9e915dbae350
+INFO 2019-07-09 19:31:07,194 basehttp 7410 140516498863872 "POST /home/doc_details/21adac7d78455a141e23bced025fb9791601e68aebdd8d21248981a43d35d676 HTTP/1.1" 200 10183
+INFO 2019-07-09 19:31:07,763 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:31:17,082 basehttp 7410 140516895934208 "GET /home HTTP/1.1" 200 16729
+INFO 2019-07-09 19:31:17,662 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:31:21,666 basehttp 7410 140516498863872 "GET /home/doc_details/21adac7d78455a141e23bced025fb9791601e68aebdd8d21248981a43d35d676 HTTP/1.1" 200 9965
+INFO 2019-07-09 19:31:22,189 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+DEBUG 2019-07-09 19:32:25,124 transaction_validator 9439 139847667918656 Comienzo del Command 'transaction_validator'
+INFO 2019-07-09 19:32:25,124 transaction_validator 9439 139847667918656 Pending transactions ...
+INFO 2019-07-09 19:32:25,125 bc_connector 9439 139847667918656 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-09 19:32:32,126 transaction_validator 9439 139847667918656 Transacción 0x11bc5a254fd77b1272626202919433356a3817dde955da4e2e6b9f05f8588433 validada
+INFO 2019-07-09 19:32:32,459 transaction_validator 9439 139847667918656 Transacción 0x85bdb04bd74b4165fe923a36c133d818d69971d344be7a47bca343fc76dec385 validada
+INFO 2019-07-09 19:32:32,701 transaction_validator 9439 139847667918656 Transacción 0xe294af4e54072283a53b93573bc7a9d18b146b4d8f35ef9774de8fbe3fd9ad10 validada
+INFO 2019-07-09 19:32:35,422 basehttp 7410 140516895934208 "GET /home/doc_details/21adac7d78455a141e23bced025fb9791601e68aebdd8d21248981a43d35d676 HTTP/1.1" 200 9966
+INFO 2019-07-09 19:32:35,444 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:32:35,844 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:32:35,994 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:32:37,707 transaction_validator 9439 139847667918656 Pending transactions ...
+INFO 2019-07-09 19:32:42,717 transaction_validator 9439 139847667918656 Pending transactions ...
+INFO 2019-07-09 19:32:47,728 transaction_validator 9439 139847667918656 Pending transactions ...
+INFO 2019-07-09 19:32:49,292 basehttp 7410 140516498863872 "POST /home/doc_details/21adac7d78455a141e23bced025fb9791601e68aebdd8d21248981a43d35d676 HTTP/1.1" 200 10196
+INFO 2019-07-09 19:32:49,793 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:32:52,739 transaction_validator 9439 139847667918656 Pending transactions ...
+INFO 2019-07-09 19:32:57,749 transaction_validator 9439 139847667918656 Pending transactions ...
+INFO 2019-07-09 19:33:00,448 basehttp 7410 140516895934208 "GET /home HTTP/1.1" 200 16675
+INFO 2019-07-09 19:33:01,020 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:33:02,760 transaction_validator 9439 139847667918656 Pending transactions ...
+INFO 2019-07-09 19:33:07,770 transaction_validator 9439 139847667918656 Pending transactions ...
+INFO 2019-07-09 19:34:09,843 basehttp 7410 140516498863872 "GET /home/doc_details/21adac7d78455a141e23bced025fb9791601e68aebdd8d21248981a43d35d676 HTTP/1.1" 200 9966
+INFO 2019-07-09 19:34:09,863 basehttp 7410 140516895934208 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:34:10,360 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:34:12,644 views 7410 140516895934208 Comprobando existencia del colaborador en el documento en la BC ...
+INFO 2019-07-09 19:34:14,412 views 7410 140516895934208 Added Collaborator Tx -> 0x76f3b2f3ee1b58a44c14f75441c7ef4de9cdda9f37040214a5a286aaf5ccf42c
+INFO 2019-07-09 19:34:15,859 basehttp 7410 140516895934208 "POST /home/doc_details/21adac7d78455a141e23bced025fb9791601e68aebdd8d21248981a43d35d676 HTTP/1.1" 200 10503
+INFO 2019-07-09 19:34:16,404 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:34:18,323 basehttp 7410 140516498863872 "GET /home HTTP/1.1" 200 16832
+INFO 2019-07-09 19:34:18,918 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:35:43,774 basehttp 7410 140516895934208 "GET /home HTTP/1.1" 200 16835
+INFO 2019-07-09 19:35:43,795 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:35:44,244 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:35:45,031 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:36:00,303 basehttp 7410 140516498863872 "GET /home HTTP/1.1" 200 16835
+INFO 2019-07-09 19:36:00,783 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:36:01,307 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:36:18,168 basehttp 7410 140516895934208 "GET /home HTTP/1.1" 200 16833
+INFO 2019-07-09 19:36:18,613 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:36:18,756 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:37:07,817 basehttp 7410 140516498863872 "GET /home HTTP/1.1" 200 16842
+INFO 2019-07-09 19:37:07,840 basehttp 7410 140516895934208 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:37:08,298 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:37:08,418 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:39:45,137 basehttp 7410 140516895934208 "GET /home HTTP/1.1" 200 16882
+INFO 2019-07-09 19:39:45,156 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:39:45,655 basehttp 7410 140516895934208 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:39:45,813 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:40:26,317 basehttp 7410 140516498863872 "GET /home HTTP/1.1" 200 16872
+INFO 2019-07-09 19:40:26,809 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:40:26,988 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:41:41,764 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 13695
+INFO 2019-07-09 19:41:41,961 basehttp 7410 140516498863872 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 304 0
+INFO 2019-07-09 19:41:42,048 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:41:43,467 basehttp 7410 140516498863872 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:42:25,113 basehttp 7410 140516498863872 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 13743
+INFO 2019-07-09 19:42:25,601 basehttp 7410 140516498863872 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:42:25,753 basehttp 7410 140516895934208 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:42:42,445 basehttp 7410 140516895934208 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 13743
+INFO 2019-07-09 19:42:42,488 basehttp 7410 140516498863872 "GET /static/css/main.css HTTP/1.1" 200 5171
+INFO 2019-07-09 19:42:42,513 basehttp 7410 140516895934208 "GET /static/js/crypto-js.js HTTP/1.1" 200 10889
+INFO 2019-07-09 19:42:42,519 basehttp 7410 140516867094272 "GET /static/js/moment.js HTTP/1.1" 200 155543
+INFO 2019-07-09 19:42:42,533 basehttp 7410 140516850308864 "GET /static/images/ok-mark.svg HTTP/1.1" 200 1442
+INFO 2019-07-09 19:42:42,548 basehttp 7410 140516858701568 "GET /media/user/2019_06/default_user.png HTTP/1.1" 200 7118
+INFO 2019-07-09 19:42:42,832 basehttp 7410 140516858701568 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 200 10186
+INFO 2019-07-09 19:42:43,123 basehttp 7410 140516850308864 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:42:43,204 basehttp 7410 140516858701568 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:43:09,081 basehttp 7410 140516858701568 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 13743
+INFO 2019-07-09 19:43:09,477 basehttp 7410 140516858701568 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:43:09,632 basehttp 7410 140516850308864 "GET /balance HTTP/1.1" 200 18
+ERROR 2019-07-09 19:48:17,530 views 10551 140057579902720 Traceback (most recent call last):
+  File "/home/alberto/Test-1/blocksign/main/views.py", line 172, in document_detail
+    comments = CollaboratorAction.objects.filter(document=document).excluede(comment="Validated").order_by('-timestamp')
+AttributeError: 'QuerySet' object has no attribute 'excluede'
+
+INFO 2019-07-09 19:48:17,623 basehttp 10551 140057579902720 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 9106
+INFO 2019-07-09 19:48:17,662 basehttp 10551 140057571510016 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:48:18,366 bc_connector 10551 140057571510016 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-09 19:48:18,388 basehttp 10551 140057579902720 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:48:19,177 basehttp 10551 140057571510016 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:48:23,658 basehttp 10551 140057571510016 "GET /upload HTTP/1.1" 200 5226
+INFO 2019-07-09 19:48:24,175 basehttp 10551 140057579902720 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:48:25,639 basehttp 10551 140057579902720 "GET /home HTTP/1.1" 200 16872
+INFO 2019-07-09 19:48:26,311 basehttp 10551 140057571510016 "GET /balance HTTP/1.1" 200 18
+ERROR 2019-07-09 19:48:27,925 views 10551 140057571510016 Traceback (most recent call last):
+  File "/home/alberto/Test-1/blocksign/main/views.py", line 172, in document_detail
+    comments = CollaboratorAction.objects.filter(document=document).excluede(comment="Validated").order_by('-timestamp')
+AttributeError: 'QuerySet' object has no attribute 'excluede'
+
+INFO 2019-07-09 19:48:27,932 basehttp 10551 140057571510016 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 9106
+INFO 2019-07-09 19:48:28,461 basehttp 10551 140057579902720 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:48:41,518 basehttp 10641 139706577131264 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 10024
+INFO 2019-07-09 19:48:41,924 bc_connector 10641 139706494875392 No existe, creando obj para la conexion con la blockchain
+INFO 2019-07-09 19:48:41,938 basehttp 10641 139706577131264 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:48:42,429 basehttp 10641 139706494875392 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:49:11,620 basehttp 10641 139706494875392 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 10081
+INFO 2019-07-09 19:49:12,014 basehttp 10641 139706494875392 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:49:12,161 basehttp 10641 139706577131264 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:50:23,954 basehttp 10641 139706577131264 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 10101
+INFO 2019-07-09 19:50:24,353 basehttp 10641 139706577131264 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:50:25,665 basehttp 10641 139706494875392 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:50:36,228 basehttp 10641 139706494875392 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 10101
+INFO 2019-07-09 19:50:36,248 basehttp 10641 139706577131264 "GET /static/css/main.css HTTP/1.1" 200 5233
+INFO 2019-07-09 19:50:36,255 basehttp 10641 139706494875392 "GET /static/js/crypto-js.js HTTP/1.1" 200 10889
+INFO 2019-07-09 19:50:36,262 basehttp 10641 139706494875392 "GET /static/images/ok-mark.svg HTTP/1.1" 200 1442
+INFO 2019-07-09 19:50:36,263 basehttp 10641 139706480039680 "GET /media/user/2019_06/default_user.png HTTP/1.1" 200 7118
+INFO 2019-07-09 19:50:36,266 basehttp 10641 139706577131264 "GET /static/js/moment.js HTTP/1.1" 200 155543
+INFO 2019-07-09 19:50:36,852 basehttp 10641 139706480039680 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:50:36,909 basehttp 10641 139706577131264 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:50:59,780 basehttp 10641 139706577131264 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 10101
+INFO 2019-07-09 19:50:59,800 basehttp 10641 139706480039680 "GET /static/css/main.css HTTP/1.1" 200 5233
+INFO 2019-07-09 19:51:00,229 basehttp 10641 139706577131264 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:51:00,504 basehttp 10641 139706480039680 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:51:33,408 basehttp 10641 139706480039680 "GET /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 10102
+INFO 2019-07-09 19:51:33,428 basehttp 10641 139706577131264 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:51:33,831 basehttp 10641 139706480039680 "GET /static/images/ico.png HTTP/1.1" 200 1344
+INFO 2019-07-09 19:51:33,957 basehttp 10641 139706577131264 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:51:40,109 views 10641 139706577131264 Comprobando existencia del colaborador en el documento en la BC ...
+INFO 2019-07-09 19:51:41,684 views 10641 139706577131264 Added Collaborator Tx -> 0x5b5af77ba8cfb4e38c3dd187cc3c3d236ca98eaeae0893a2903803a270d746d1
+INFO 2019-07-09 19:51:43,316 basehttp 10641 139706577131264 "POST /home/doc_details/fa8c647d761b7b47bb0736caaefcd185c21d9288ca88cf87c2d0b1fbc5bf75c1 HTTP/1.1" 200 10632
+INFO 2019-07-09 19:51:43,334 basehttp 10641 139706480039680 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:51:43,854 basehttp 10641 139706480039680 "GET /balance HTTP/1.1" 200 18
+INFO 2019-07-09 19:58:05,720 basehttp 10641 139706480039680 "GET / HTTP/1.1" 302 0
+INFO 2019-07-09 19:58:05,740 basehttp 10641 139706480039680 "GET /login HTTP/1.1" 200 3622
+INFO 2019-07-09 19:58:05,783 basehttp 10641 139706480039680 "GET /static/css/login.css HTTP/1.1" 200 810
+INFO 2019-07-09 19:58:06,604 basehttp 10641 139706480039680 "GET / HTTP/1.1" 302 0
+INFO 2019-07-09 19:58:06,614 basehttp 10641 139706480039680 "GET /login HTTP/1.1" 200 3622
+INFO 2019-07-09 19:58:18,349 basehttp 10641 139706480039680 "POST /login HTTP/1.1" 302 0
+INFO 2019-07-09 19:58:18,421 basehttp 10641 139706480039680 "GET /home HTTP/1.1" 200 15288
+INFO 2019-07-09 19:58:18,456 basehttp 10641 139706480039680 "GET /static/css/main.css HTTP/1.1" 200 5233
+INFO 2019-07-09 19:58:18,457 basehttp 10641 139706577131264 "GET /static/js/crypto-js.js HTTP/1.1" 200 10889
+INFO 2019-07-09 19:58:18,459 basehttp 10641 139706471646976 "GET /static/images/ok-mark.svg HTTP/1.1" 200 1442
+INFO 2019-07-09 19:58:18,460 basehttp 10641 139706463254272 "GET /media/user/2019_07/descarga.jpeg HTTP/1.1" 200 10186
+INFO 2019-07-09 19:58:18,461 basehttp 10641 139706494875392 "GET /static/js/moment.js HTTP/1.1" 200 155543
+INFO 2019-07-09 19:58:18,848 basehttp 10641 139706494875392 "GET /static/localisation/es.json HTTP/1.1" 200 946
+INFO 2019-07-09 19:58:18,896 basehttp 10641 139706463254272 "GET /static/images/calendar.svg HTTP/1.1" 200 1951
+INFO 2019-07-09 19:58:19,010 basehttp 10641 139706494875392 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-09 19:58:24,829 basehttp 10641 139706494875392 "GET /home/doc_details/21adac7d78455a141e23bced025fb9791601e68aebdd8d21248981a43d35d676 HTTP/1.1" 200 10116
+INFO 2019-07-09 19:58:25,180 basehttp 10641 139706494875392 "GET /balance HTTP/1.1" 200 17
+INFO 2019-07-09 19:59:05,640 views 10641 139706494875392 Tx -> 0x5340663df79faf08eabbed4d0b74322832f551ecae14f02177d9f2e1e359e0a1
+INFO 2019-07-09 19:59:05,869 basehttp 10641 139706494875392 "POST /add_comment HTTP/1.1" 302 0
+INFO 2019-07-09 19:59:05,903 basehttp 10641 139706494875392 "GET /home/doc_details/21adac7d78455a141e23bced025fb9791601e68aebdd8d21248981a43d35d676 HTTP/1.1" 200 11035
+INFO 2019-07-09 19:59:05,922 basehttp 10641 139706494875392 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-07-09 19:59:06,196 basehttp 10641 139706494875392 "GET /balance HTTP/1.1" 200 17

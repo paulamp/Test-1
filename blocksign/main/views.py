@@ -167,9 +167,19 @@ def document_detail(request, hash):
     try:
         document = Document.objects.get(hash=hash)
         collaborators = CollaboratorDocument.objects.filter(document=document)
+        r_address = request.user.signuser.address
+        is_collaborator = collaborators.filter(collaborator__address=r_address).exists()
+        comments = CollaboratorAction.objects.filter(document=document).exclude(comment="Validated").order_by('-timestamp')
+        if r_address != document.minter.address and not is_collaborator:
+            return render(request, 'doc_detail.html')
+        if r_address == document.minter.address:
+            #CollaboratorAction.objects.filter(document=document).update(view=True)
+            pass
         context = {
             'document':document,
-            'collaborators': collaborators
+            'collaborators': collaborators,
+            'is_collaborator':is_collaborator,
+            'comments':comments
         }
         if request.method == 'POST':
             collaborator_email = request.POST.get("collaborator_email", '')
@@ -181,6 +191,14 @@ def document_detail(request, hash):
                 logger.info("No te puedes añadir de colaborador a ti mismo")
                 messages.warning(request, "No te puedes añadir de colaborador a ti mismo")
                 return render(request, 'doc_detail.html', context)
+            status = None
+            if document.status.name in ["Confirmado" ,"Rechazado"]:
+                try:
+                    status = DocumentStatus.objects.get(name="Con colaboradores")
+                except:
+                    messages.warning(request, "No se ha encontrado el estado del documento")
+                    return render(request, 'doc_detail.html', context)
+
             sign_user = get_signUser_or_create(collaborator_email)
             sc_sign = SCInfo.objects.get(name="Sign")
             bc_values = BCValue.objects.first()
@@ -207,6 +225,9 @@ def document_detail(request, hash):
             new_collaborator.collaborator = sign_user
             new_collaborator.tx_id = tx_id
             new_collaborator.save()
+            if status:
+                document.status = status
+                document.save()
             messages.success(request, "colaborador añadido con éxito")
         return render(request, 'doc_detail.html', context)
     except Document.DoesNotExist:
@@ -287,6 +308,49 @@ def profile_view(request):
             request.user.signuser.save()
     return render(request, 'profile.html')
 
+@login_required
+def add_comment_view(request):
+    if request.method == "POST":
+        hash = request.POST.get('hash', None)
+        if not hash:
+            return HttpResponseRedirect(reverse('home'))
+        try:
+            document = Document.objects.get(hash=hash)
+        except:
+            messages.error(request, "Documento no encontrado en la aplicación")
+            return HttpResponseRedirect(reverse('home'))
+        try:
+            sc_sign = SCInfo.objects.get(name="Sign")
+        except:
+            messages.error(request, "No se ha encontrado información del SC")
+            return HttpResponseRedirect(reverse('doc_details', kwargs={'hash':hash}))
+        bc_values = BCValue.objects.first()
+        if not bc_values:
+            messages.error(request, "No se ha encontrado información sobre la BC")
+            return HttpResponseRedirect(reverse('doc_details', kwargs={'hash':hash}))
+        comment = request.POST.get('comment_back', None)
+        if not comment:
+            return HttpResponseRedirect(reverse('doc_details', kwargs={'hash':hash}))
+
+        status_doc = get_doc_status(document, request.user.signuser, comment)
+        if not status_doc:
+            messages.error(request, "No se ha encontrado el estado del documento")
+            return HttpResponseRedirect(reverse('doc_details', kwargs={'hash':hash}))
+
+        bcobj = get_bcobj()
+        tx_id = bcobj.transact(sc_sign, bc_values.gas, bc_values.gas_price, "addValidationUser", request.user.signuser, hash, request.user.signuser.address, comment)
+        logger.info(f"Tx -> {tx_id}")
+        new_action = CollaboratorAction()
+        new_action.document = document
+        new_action.collaborator = request.user.signuser
+        new_action.tx_id = tx_id
+        new_action.comment = comment
+        new_action.save()
+        document.status = status_doc
+        document.save()
+        return HttpResponseRedirect(reverse('doc_details', kwargs={'hash':hash}))
+    return HttpResponseRedirect(reverse('home'))
+
 #############
 ##FUNCTIONS##
 #############
@@ -318,6 +382,31 @@ def get_user_or_create(email):
         user.email = email
         user.save()
     return user
+
+def get_doc_status(document, collaborator, comment):
+    status_name = "Con observaciones"
+    if comment == "Validated":
+        collaborations = CollaboratorDocument.objects.filter(document=document).exclude(collaborator=collaborator)
+        all_last_comments = [comment]
+        for collaboration in collaborations:
+            last_comment = get_last_comment(collaboration.collaborator)
+            if last_comment:
+                all_last_comments.append(last_comment)
+        no_repeats = set(all_last_comments)
+        if len(no_repeats) == 1:
+            if "Validated" in no_repeats:
+                status_name = "Validado"
+    try:
+        return DocumentStatus.objects.get(name = status_name)
+    except:
+        logger.error(f"Estado {status_name} no encontrado")
+        return None
+
+def get_last_comment(collaborator):
+    last_comment = CollaboratorAction.objects.filter(collaborator=collaborator).order_by('-timestamp')
+    if last_comment:
+        return last_comment[0]
+    return None
 
 def string_to_date(date_str):
     return datetime.datetime.strptime(date_str, '%d/%m/%Y').date()

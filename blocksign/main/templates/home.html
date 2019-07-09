@@ -75,8 +75,15 @@
             <td class="text-uppercase text-center" data-order="{{ d.timestamp|get_timestamp }}">{{ d.timestamp|date:"d/m/Y H:i:s" }}</td>
             <td class="text-center">
               {% if d.status.name == "Confirmado" %}
-                <i style="color:blue;font-size:12px;" class="fas fa-circle" title="Registrado en la blockchain"></i>
-
+                <i style="color:#005aff;font-size:12px;" class="fas fa-circle" title="Registrado en la blockchain"></i>
+              {% elif d.status.name == "Rechazado" %}
+                <i style="color:red;font-size:12px;" class="fas fa-times" title="Rechazado en la blockchain"></i>
+              {% elif d.status.name == "Con colaboradores" %}
+                <i style="color:#c4a4e0;font-size:12px;" class="fas fa-circle" title="El documeno posee colaboradores"></i>
+              {% elif d.status.name == "Validado" %}
+                <i style="color:green;font-size:12px;" class="fas fa-circle" title="El documento ha sido validado por los colaboradores"></i>
+              {% elif d.status.name == "Con observaciones" %}
+                <i style="color:orange;font-size:12px;" class="fas fa-circle" title="Se han realizado sugerencias por parte de los colaboradores"></i>
               {% else %}
                 <i style="color:gray;font-size:12px;" class="fas fa-spinner" title="Pendiente de ser confirmado en la blockchain"></i>
               {% endif %}
@@ -162,7 +169,19 @@
             </td>
             <td class="text-uppercase text-center" data-order="{{ d.timestamp|get_timestamp }}">{{ d.timestamp|date:"d/m/Y H:i:s" }}</td>
             <td class="text-center">
-              <i style="color:blue;font-size:12px;"class="fas fa-circle" title="Registrado en la blockchain"></i>
+              {% if d.status.name == "Confirmado" %}
+                <i style="color:#005aff;font-size:12px;" class="fas fa-circle" title="Registrado en la blockchain"></i>
+              {% elif d.status.name == "Rechazado" %}
+                <i style="color:red;font-size:12px;" class="fas fa-times" title="Rechazado en la blockchain"></i>
+              {% elif d.status.name == "Con colaboradores" %}
+                <i style="color:#c4a4e0;font-size:12px;" class="fas fa-circle" title="El documeno posee colaboradores"></i>
+              {% elif d.status.name == "Validado" %}
+                <i style="color:green;font-size:12px;" class="fas fa-circle" title="El documento ha sido validado por los colaboradores"></i>
+              {% elif d.status.name == "Con observaciones" %}
+                <i style="color:orange;font-size:12px;" class="fas fa-circle" title="Se han realizado sugerencias por parte de los colaboradores"></i>
+              {% else %}
+                <i style="color:gray;font-size:12px;" class="fas fa-spinner" title="Pendiente de ser confirmado en la blockchain"></i>
+              {% endif %}
             </td>
             <td class="text-center">
               <a class="info_detail" href="{% url 'doc_details' d.hash %}">

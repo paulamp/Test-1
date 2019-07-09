@@ -25,7 +25,7 @@ body{
   margin: 0 auto;
   width: 50%;
   height: 50%;
-  
+
 }
 
 .profile-usertitle {
@@ -123,14 +123,14 @@ body{
 
 .depositar{
   border-color: #922518;
-  color: #922518;
+  color: #922518!important;
   background-color: white;
   text-decoration: none;
 }
 
 .depositar:hover{
   border-color: white;
-  color: white;
+  color: white!important;
   background-color: #922518;
   text-decoration: none;
 }
@@ -296,4 +296,40 @@ input.date_form{
 
 #avatar{
   font-size: 65%;
+}
+
+.btn_validar{
+  border-color: #a9c458;
+  color: #a9c458!important;
+  background-color: white;
+  text-decoration: none;
+}
+
+.btn_validar:hover{
+  border-color: white;
+  color: white!important;
+  background-color: #a9c458;
+  text-decoration: none;
+}
+
+.avatares{
+  width: 40px;
+}
+
+.sugerencia{
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+  background-color: #fafafa
+}
+
+.extra_data{
+  font-size: 10px;
+  color: #dcd5d5;
+}
+
+.lista_colaboradores{
+  height: 300px;
+  overflow-y: auto;
 }
