@@ -105,5 +105,10 @@ function get_eth() {
     })
     ;
 }
+
+function no_repeat(button_id) {
+    document.getElementById(button_id).disabled = true;
+    return true;
+}
 $(document).ready(get_eth);
 </script>

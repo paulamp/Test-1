@@ -9,7 +9,7 @@ from django.core.management.base import BaseCommand, CommandError
 
 from main.bc_connector import get_bcobj
 
-from main.models import Document, DocumentStatus
+from main.models import Document, DocumentStatus, CollaboratorAction
 
 logger = logging.getLogger('blocksign')
 
@@ -47,4 +47,24 @@ class Command(BaseCommand):
                     tx.status = status
                     tx.save()
                     logger.warning(f'Transacción {tx.tx_id} rechazada')
+            pending_actions = CollaboratorAction.objects.filter(status=status_pending)
+            for action in pending_actions:
+                if bcobj.is_validated(action.tx_id):
+                    try:
+                        status = DocumentStatus.objects.get(name="Confirmado")
+                    except DocumentStatus.DoesNotExist:
+                        logger.error("No se ha encontrado el estado 'Confirmado'")
+                        return None
+                    action.status = status
+                    action.save()
+                    logger.info(f'Transacción {action.tx_id} validada')
+                elif (action.timestamp + timedelta(seconds=60)) < timezone.now():
+                    try:
+                        status = DocumentStatus.objects.get(name="Rechazado")
+                    except Exception as e:
+                        logger.error("No se ha encontrado el estado 'Rechazado'")
+                        return None
+                    action.status = status
+                    action.save()
+                    logger.warning(f'Transacción {action.tx_id} rechazada')
             time.sleep(5)

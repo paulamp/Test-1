@@ -173,13 +173,22 @@ def document_detail(request, hash):
         if r_address != document.minter.address and not is_collaborator:
             return render(request, 'doc_detail.html')
         if r_address == document.minter.address:
-            #CollaboratorAction.objects.filter(document=document).update(view=True)
-            pass
+            CollaboratorAction.objects.filter(document=document).update(view=True)
+
+        colaborador_document = {}
+        last_action_tx = {}
+        for c in collaborators:
+            msg = get_last_comment(document, c.collaborator)
+            tx = get_last_tx_action(document, c.collaborator)
+            colaborador_document[c.collaborator.user.email] = msg
+            last_action_tx[c.collaborator.user.email] = tx
         context = {
             'document':document,
             'collaborators': collaborators,
             'is_collaborator':is_collaborator,
-            'comments':comments
+            'comments':comments,
+            'colaborador_document': colaborador_document,
+            'last_action_tx':last_action_tx
         }
         if request.method == 'POST':
             collaborator_email = request.POST.get("collaborator_email", '')
@@ -328,6 +337,12 @@ def add_comment_view(request):
         if not bc_values:
             messages.error(request, "No se ha encontrado información sobre la BC")
             return HttpResponseRedirect(reverse('doc_details', kwargs={'hash':hash}))
+        try:
+            status = DocumentStatus.objects.get(name="Pendiente")
+        except:
+            messages.error(request, "No se ha encontrado el estado 'Pendiente' en la app")
+            return HttpResponseRedirect(reverse('doc_details', kwargs={'hash':hash}))
+
         comment = request.POST.get('comment_back', None)
         if not comment:
             return HttpResponseRedirect(reverse('doc_details', kwargs={'hash':hash}))
@@ -344,6 +359,7 @@ def add_comment_view(request):
         new_action.document = document
         new_action.collaborator = request.user.signuser
         new_action.tx_id = tx_id
+        new_action.status = status
         new_action.comment = comment
         new_action.save()
         document.status = status_doc
@@ -389,7 +405,7 @@ def get_doc_status(document, collaborator, comment):
         collaborations = CollaboratorDocument.objects.filter(document=document).exclude(collaborator=collaborator)
         all_last_comments = [comment]
         for collaboration in collaborations:
-            last_comment = get_last_comment(collaboration.collaborator)
+            last_comment = get_last_comment(document, collaboration.collaborator)
             if last_comment:
                 all_last_comments.append(last_comment)
         no_repeats = set(all_last_comments)
@@ -402,10 +418,16 @@ def get_doc_status(document, collaborator, comment):
         logger.error(f"Estado {status_name} no encontrado")
         return None
 
-def get_last_comment(collaborator):
-    last_comment = CollaboratorAction.objects.filter(collaborator=collaborator).order_by('-timestamp')
+def get_last_comment(document, collaborator):
+    last_comment = CollaboratorAction.objects.filter(document=document, collaborator=collaborator).order_by('-timestamp')
     if last_comment:
-        return last_comment[0]
+        return last_comment[0].comment
+    return None
+
+def get_last_tx_action(document, collaborator):
+    last_comment = CollaboratorAction.objects.filter(document=document, collaborator=collaborator).order_by('-timestamp')
+    if last_comment:
+        return last_comment[0].tx_id
     return None
 
 def string_to_date(date_str):

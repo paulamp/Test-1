@@ -25,7 +25,6 @@ window.onload = function() {
 
     reader.onload = function(e) {
       var data = reader.result;
-      console.log("DATA");
 			setTimeout(function() {
 				var a = CryptoJSH.SHA256(data, progress, hash_to_string);
 			}, 200);

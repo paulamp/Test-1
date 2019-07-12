@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load blocksign_tags %}
 
 {% block contents %}
 <div class="row">
@@ -24,9 +25,24 @@
         <li class="list-group-item d-flex justify-content-between lh-condensed">
           <div>
             <h6 class="my-0">{{collaborator.collaborator.user.email}}</h6>
-            <small class="text-muted"></small>
+            <small class="text-muted">{{collaborator.collaborator.user.first_name}} {{collaborator.collaborator.user.last_name}}</small>
           </div>
-          <span class="text-muted"><i class="fas fa-spinner"></i></span>
+            {% if colaborador_document|get_item:collaborator.collaborator.user.email == "Validated" %}
+              <span class="text-muted d-flex justify-content-center align-items-center">
+                <a href="https://rinkeby.etherscan.io/tx/{{last_action_tx|get_item:collaborator.collaborator.user.email}}" target="_blank">
+                  <i style="color:green;font-size:12px;" class="fas fa-circle" title="Ha validado el documento"></i>
+                </a>
+              </span>
+            {% elif colaborador_document|get_item:collaborator.collaborator.user.email %}
+              <span class="text-muted d-flex justify-content-center align-items-center">
+                <a href="https://rinkeby.etherscan.io/tx/{{last_action_tx|get_item:collaborator.collaborator.user.email}}" target="_blank">
+                  <i style="color:orange;font-size:12px;" class="fas fa-circle"></i>
+                </a>
+              </span>
+            {% else %}
+              <span class="text-muted d-flex justify-content-center align-items-center"><i class="fas fa-spinner"></i></span>
+            {% endif %}
+
         </li>
       {% endfor %}
     </ul>
@@ -75,7 +91,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="status">Estado en la blockchain</label>
+      <label for="status">Estado del documento</label>
       <input type="text" class="form-control" id="status" value="{{document.status.name}}" readonly>
     </div>
   </div>
@@ -89,7 +105,11 @@
           <div class="text-left">
             <div class="row">
               <div class="col-1 mt-2">
-                <img src="{{comment.collaborator.user.signuser.avatar.url}}" class="img-responsive avatares" alt="">
+                {% if not comment.collaborator.user.signuser.avatar%}
+                  <img src="{% static "images/default_user.png" %}" class="img-responsive avatares" alt="">
+                {% else %}
+                  <img src="{{comment.collaborator.user.signuser.avatar.url}}" class="img-responsive avatares" alt="">
+                {% endif %}
               </div>
               <div class="col-11 mt-2">
                 <div class="sugerencia">
@@ -97,7 +117,22 @@
                   <br>
                   <span>{{comment.comment}}</span>
                 </div>
-                <span class="extra_data">{{ comment.timestamp|date:"d/m/Y H:i:s" }} <a href="https://rinkeby.etherscan.io/tx/{{comment.tx_id}}" target="_blank"><i class="fas fa-external-link-alt"></i></a></span>
+                <div class="row">
+                  <div class="col-6">
+                    <span class="extra_data">{{ comment.timestamp|date:"d/m/Y H:i:s" }} <a href="https://rinkeby.etherscan.io/tx/{{comment.tx_id}}" target="_blank"><i class="fas fa-external-link-alt"></i></a></span>
+                  </div>
+                  <div class="col-6 text-right">
+                    {% if comment.status.name == "Pendiente" %}
+                      <span class="text-right"><i style="font-size:12px;" class="fas fa-spinner"></i></span>
+                    {% else %}
+                      {% if comment.view %}
+                        <span class="text-right"><i style="color:blue;font-size:12px;"class="fas fa-check-double"></i></span>
+                      {% else %}
+                        <span class="text-right"><i style="color:gray;font-size:12px;"class="fas fa-check-double"></i></span>
+                      {% endif %}
+                    {% endif %}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -182,12 +217,14 @@
   }
 
   $('#final_comment_button').click(function(event) {
+    no_repeat('final_comment_button')
     var comment_val = $('#comment_document').val();
     add_input_comment(comment_val)
     $("#add_comment_form").submit();
   });
 
   $('#final_validar_button').click(function(event) {
+    no_repeat('final_validar_button')
     add_input_comment("Validated")
     $("#add_comment_form").submit();
   });

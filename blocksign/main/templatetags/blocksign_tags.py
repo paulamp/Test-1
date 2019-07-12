@@ -10,3 +10,8 @@ def get_timestamp(datetime_obj):
         return int(datetime_obj.timestamp())
     except:
         return None
+
+@register.filter
+def get_item(dictionary, key):
+    value =  dictionary.get(key, None)
+    return value
